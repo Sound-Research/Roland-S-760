@@ -9,18 +9,39 @@ Documentation for the Roland S-760 sampler.
 
 ## Mouse
 
-The S-760 uses a DB-9 mouse port. To use a standard USB mouse, a mouSTer adapter board is used.
+The S-760 uses a DB-9 mouse port with the **MSX mouse protocol** (nibble-clock based, originally MITSUMI).
+The original Roland mouse is the MU-1, which is a rebranded MITSUMI MSX mouse.
 
-### mouSTer USB Mouse Adapter
+**Important:** The MSX DB-9 pinout has **pin 5 = +5V** and **pin 9 = GND**, which is **reversed** compared to Atari/Amiga DB-9 (pin 7 = +5V, pin 8 = GND).
+Atari, Amiga, and Commodore mice are **not compatible** — they use different protocols and reversed power pins.
+
+### Compatible adapters
+
+#### MSX PS/2 mouse interface (recommended)
+
+- **Source**: [Gotek Retro](https://www.gotek-retro.eu/msx-ps2-mouse-interface/) or [Tindie (Denjhang)](https://www.tindie.com/products/denjhang/msx-ps2-mouse-converter/)
+- **Description**: ATtiny2313-based PS/2 to MSX mouse protocol converter
+- **Status**: Confirmed working with S-760
+- **Note**: Pressing both mouse buttons simultaneously toggles between mouse and joystick emulation modes, so simultaneous two-button operations don't work
+- **Requires**: A native PS/2 mouse, or a USB mouse with genuine PS/2 compatibility mode (not all passive USB-to-PS/2 adapters work)
+
+#### USB-to-MSX mouse adapter
+
+- **Source**: Occasionally available on eBay (search "USB to MSX Mouse Adapter Towns Roland")
+- **Description**: Direct USB to MSX mouse protocol converter
+- **Status**: Confirmed working with S-760 by users
+- **Note**: Small-batch/hobbyist product, stock varies
+
+#### Original MSX mice
+
+Any genuine MSX mouse works (Roland MU-1, Philips MSX mouse, etc.).
+Increasingly rare and expensive.
+
+### mouSTer USB mouse adapter (not compatible)
 
 - **Source**: [C64 OS Store](https://c64os.com/store/)
-- **Description**: Multi-mode universal USB input adapter
-- **Compatibility**: Atari, Commodore 8-bit, Amiga, Spectrum, and other retro systems with DB-9 mouse/joystick ports
-- **Features**:
-  - Supports standard USB mice including wireless models with dongles
-  - Scroll wheel support
-  - Highly configurable for different systems and input modes
-  - 3D printed black enclosure
+- **Status**: **Not compatible** — does not support MSX protocol (only Atari ST, Amiga, and C64 modes)
+- **Note**: Previously recommended by Claude in error, purchased based on that recommendation, and confirmed not to work with the S-760. The mouSTer lacks MSX protocol support entirely.
 
 ## Video Output
 
