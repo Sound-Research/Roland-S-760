@@ -59,6 +59,21 @@ The S-760 (with OP-760-1 expansion) has a digital RGB video output. To convert t
   - Bare-metal firmware for accurate timing
 - **License**: GPL-3.0
 
+#### Raspberry Pi setup
+
+The RGBtoHDMI runs bare-metal firmware on a Raspberry Pi Zero (no OS needed).
+
+1. **Download** the latest release zip from [hoglet67/RGBtoHDMI releases](https://github.com/hoglet67/RGBtoHDMI/releases)
+2. **Format** a micro SD card as FAT32
+3. **Extract** the zip to the root of the SD card (files should be in the root directory, not in a subfolder)
+4. **Safely eject** the SD card from the PC
+5. **Insert** the SD card into the Pi Zero
+
+- **Recommended Pi**: Raspberry Pi Zero (non-W) — the WiFi radio on the W models can cause visual artifacts
+- **If using a Pi Zero W**: disable radios by adding `dtoverlay=disable-wifi` and `dtoverlay=disable-bt` to `config.txt` on the SD card
+- **Avoid Pi Zero 2 W**: different GPIO timing causes compatibility issues
+- **Upgrading**: wipe the SD card first, do not overwrite an existing install — old saved profiles are not guaranteed to be compatible
+
 ## SCSI Storage
 
 The S-760 uses SCSI for external storage. A ZuluSCSI Pico Slim replaces physical SCSI drives with SD card-based disk images.
