@@ -1,0 +1,1676 @@
+(kicad_sch
+  (version 20231120)
+  (generator "usb_msx_gen")
+  (generator_version "1.0")
+  (uuid "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55")
+  (paper "A3")
+
+  (lib_symbols
+    (symbol "usb_msx:RP2040"
+      (pin_names (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at 0 31.75 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "RP2040" (at 0 -29.21 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "JLCPCB" "C2040" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:RP2040_0_1"
+        (rectangle (start -15.24 27.94) (end 15.24 -25.4) (stroke (width 0.254) (type default)) (fill (type background)))
+      )
+      (symbol "usb_msx:RP2040_1_1"
+        (pin bidirectional line (at -16.51 22.86 0) (length 2.54) (name "GPIO0" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 20.32 0) (length 2.54) (name "GPIO1" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 17.78 0) (length 2.54) (name "GPIO2" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 15.24 0) (length 2.54) (name "GPIO3" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 12.7 0) (length 2.54) (name "GPIO4" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 10.16 0) (length 2.54) (name "GPIO5" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 7.62 0) (length 2.54) (name "GPIO6" (effects (font (size 1.016 1.016)))) (number "8" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 5.08 0) (length 2.54) (name "GPIO7" (effects (font (size 1.016 1.016)))) (number "9" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 2.54 0) (length 2.54) (name "GPIO8" (effects (font (size 1.016 1.016)))) (number "11" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 0 0) (length 2.54) (name "GPIO9" (effects (font (size 1.016 1.016)))) (number "12" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 -2.54 0) (length 2.54) (name "GPIO10" (effects (font (size 1.016 1.016)))) (number "13" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 -5.08 0) (length 2.54) (name "GPIO11" (effects (font (size 1.016 1.016)))) (number "14" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 -7.62 0) (length 2.54) (name "GPIO12" (effects (font (size 1.016 1.016)))) (number "15" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 -10.16 0) (length 2.54) (name "GPIO13" (effects (font (size 1.016 1.016)))) (number "16" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 -12.7 0) (length 2.54) (name "GPIO14" (effects (font (size 1.016 1.016)))) (number "18" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -16.51 -15.24 0) (length 2.54) (name "GPIO15" (effects (font (size 1.016 1.016)))) (number "19" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 22.86 0) (length 2.54) (name "GPIO16" (effects (font (size 1.016 1.016)))) (number "28" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 20.32 0) (length 2.54) (name "GPIO17" (effects (font (size 1.016 1.016)))) (number "29" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 17.78 0) (length 2.54) (name "GPIO18" (effects (font (size 1.016 1.016)))) (number "30" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 15.24 0) (length 2.54) (name "GPIO19" (effects (font (size 1.016 1.016)))) (number "31" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 12.7 0) (length 2.54) (name "GPIO20" (effects (font (size 1.016 1.016)))) (number "32" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 10.16 0) (length 2.54) (name "GPIO21" (effects (font (size 1.016 1.016)))) (number "33" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 7.62 0) (length 2.54) (name "GPIO22" (effects (font (size 1.016 1.016)))) (number "35" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 5.08 0) (length 2.54) (name "GPIO23" (effects (font (size 1.016 1.016)))) (number "36" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 2.54 0) (length 2.54) (name "GPIO24" (effects (font (size 1.016 1.016)))) (number "37" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 0 0) (length 2.54) (name "GPIO25" (effects (font (size 1.016 1.016)))) (number "38" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 -2.54 0) (length 2.54) (name "GPIO26/ADC0" (effects (font (size 1.016 1.016)))) (number "39" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 -5.08 0) (length 2.54) (name "GPIO27/ADC1" (effects (font (size 1.016 1.016)))) (number "40" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 -7.62 0) (length 2.54) (name "GPIO28/ADC2" (effects (font (size 1.016 1.016)))) (number "41" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 -10.16 0) (length 2.54) (name "GPIO29/ADC3" (effects (font (size 1.016 1.016)))) (number "42" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 -12.7 0) (length 2.54) (name "SWCLK" (effects (font (size 1.016 1.016)))) (number "25" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 16.51 -15.24 0) (length 2.54) (name "SWD" (effects (font (size 1.016 1.016)))) (number "26" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at -10.16 29.21 0) (length 2.54) (name "IOVDD" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at -7.62 29.21 0) (length 2.54) (name "IOVDD" (effects (font (size 1.016 1.016)))) (number "10" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at -5.08 29.21 0) (length 2.54) (name "IOVDD" (effects (font (size 1.016 1.016)))) (number "17" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at -2.54 29.21 0) (length 2.54) (name "IOVDD" (effects (font (size 1.016 1.016)))) (number "23" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 0 29.21 0) (length 2.54) (name "IOVDD" (effects (font (size 1.016 1.016)))) (number "34" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 2.54 29.21 0) (length 2.54) (name "IOVDD" (effects (font (size 1.016 1.016)))) (number "43" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 5.08 29.21 0) (length 2.54) (name "IOVDD" (effects (font (size 1.016 1.016)))) (number "50" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 7.62 29.21 0) (length 2.54) (name "USB_VDD" (effects (font (size 1.016 1.016)))) (number "49" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 10.16 29.21 0) (length 2.54) (name "ADC_AVDD" (effects (font (size 1.016 1.016)))) (number "44" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 -21.59 0) (length 2.54) (name "USB_DM" (effects (font (size 1.016 1.016)))) (number "47" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -10.16 -21.59 0) (length 2.54) (name "USB_DP" (effects (font (size 1.016 1.016)))) (number "48" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -7.62 -21.59 0) (length 2.54) (name "QSPI_SCLK" (effects (font (size 1.016 1.016)))) (number "52" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -5.08 -21.59 0) (length 2.54) (name "QSPI_SD0" (effects (font (size 1.016 1.016)))) (number "53" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -2.54 -21.59 0) (length 2.54) (name "QSPI_SD1" (effects (font (size 1.016 1.016)))) (number "55" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 0 -21.59 0) (length 2.54) (name "QSPI_SD2" (effects (font (size 1.016 1.016)))) (number "54" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 2.54 -21.59 0) (length 2.54) (name "QSPI_SD3" (effects (font (size 1.016 1.016)))) (number "51" (effects (font (size 1.016 1.016)))))
+        (pin input line (at 5.08 -21.59 0) (length 2.54) (name "QSPI_SS" (effects (font (size 1.016 1.016)))) (number "56" (effects (font (size 1.016 1.016)))))
+        (pin input line (at 7.62 -21.59 0) (length 2.54) (name "XIN" (effects (font (size 1.016 1.016)))) (number "21" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 10.16 -21.59 0) (length 2.54) (name "XOUT" (effects (font (size 1.016 1.016)))) (number "22" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at -12.7 -26.67 0) (length 2.54) (name "DVDD" (effects (font (size 1.016 1.016)))) (number "24" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at -7.62 -26.67 0) (length 2.54) (name "VREG_VIN" (effects (font (size 1.016 1.016)))) (number "45" (effects (font (size 1.016 1.016)))))
+        (pin power_out line (at -2.54 -26.67 0) (length 2.54) (name "VREG_VOUT" (effects (font (size 1.016 1.016)))) (number "46" (effects (font (size 1.016 1.016)))))
+        (pin input line (at 2.54 -26.67 0) (length 2.54) (name "TESTEN" (effects (font (size 1.016 1.016)))) (number "20" (effects (font (size 1.016 1.016)))))
+        (pin input line (at 7.62 -26.67 0) (length 2.54) (name "RUN" (effects (font (size 1.016 1.016)))) (number "27" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 12.7 -26.67 0) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "57" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:W25Q16JVSNIQ"
+      (pin_names (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "W25Q16JVSNIQ" (at 0 -7.62 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "JLCPCB" "C131024" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:W25Q16JVSNIQ_0_1"
+        (rectangle (start -7.62 6.35) (end 7.62 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))
+      )
+      (symbol "usb_msx:W25Q16JVSNIQ_1_1"
+        (pin input line (at -10.16 3.81 0) (length 2.54) (name "~{CS}" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin output line (at 10.16 3.81 180) (length 2.54) (name "DO/IO1" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+        (pin input line (at 10.16 1.27 180) (length 2.54) (name "~{WP}/IO2" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 0 -8.89 90) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+        (pin input line (at -10.16 1.27 0) (length 2.54) (name "DI/IO0" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+        (pin input line (at -10.16 -1.27 0) (length 2.54) (name "CLK" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+        (pin input line (at 10.16 -1.27 180) (length 2.54) (name "~{HOLD}/IO3" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 0 8.89 270) (length 2.54) (name "VCC" (effects (font (size 1.016 1.016)))) (number "8" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:74HCT245"
+      (pin_names (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at 0 16.51 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "74HCT245" (at 0 -16.51 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "JLCPCB" "C6636" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:74HCT245_0_1"
+        (rectangle (start -10.16 15.24) (end 10.16 -15.24) (stroke (width 0.254) (type default)) (fill (type background)))
+      )
+      (symbol "usb_msx:74HCT245_1_1"
+        (pin input line (at -12.7 12.7 0) (length 2.54) (name "DIR" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 10.16 0) (length 2.54) (name "A1" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 7.62 0) (length 2.54) (name "A2" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 5.08 0) (length 2.54) (name "A3" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 2.54 0) (length 2.54) (name "A4" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 0 0) (length 2.54) (name "A5" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 -2.54 0) (length 2.54) (name "A6" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 -5.08 0) (length 2.54) (name "A7" (effects (font (size 1.016 1.016)))) (number "8" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at -12.7 -7.62 0) (length 2.54) (name "A8" (effects (font (size 1.016 1.016)))) (number "9" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 0 -17.78 90) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "10" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 -7.62 180) (length 2.54) (name "B8" (effects (font (size 1.016 1.016)))) (number "11" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 -5.08 180) (length 2.54) (name "B7" (effects (font (size 1.016 1.016)))) (number "12" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 -2.54 180) (length 2.54) (name "B6" (effects (font (size 1.016 1.016)))) (number "13" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 0 180) (length 2.54) (name "B5" (effects (font (size 1.016 1.016)))) (number "14" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 2.54 180) (length 2.54) (name "B4" (effects (font (size 1.016 1.016)))) (number "15" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 5.08 180) (length 2.54) (name "B3" (effects (font (size 1.016 1.016)))) (number "16" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 7.62 180) (length 2.54) (name "B2" (effects (font (size 1.016 1.016)))) (number "17" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 12.7 10.16 180) (length 2.54) (name "B1" (effects (font (size 1.016 1.016)))) (number "18" (effects (font (size 1.016 1.016)))))
+        (pin input line (at -12.7 -10.16 0) (length 2.54) (name "~{OE}" (effects (font (size 1.016 1.016)))) (number "19" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 0 17.78 270) (length 2.54) (name "VCC" (effects (font (size 1.016 1.016)))) (number "20" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:XC6206P332MR"
+      (pin_names (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "U" (at 0 7.62 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "XC6206P332MR" (at 0 -7.62 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "JLCPCB" "C5446" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:XC6206P332MR_0_1"
+        (rectangle (start -7.62 6.35) (end 7.62 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))
+      )
+      (symbol "usb_msx:XC6206P332MR_1_1"
+        (pin power_in line (at 0 -8.89 90) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin power_out line (at 10.16 0 180) (length 2.54) (name "VOUT" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at -10.16 0 0) (length 2.54) (name "VIN" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:Crystal_4Pin"
+      (pin_names (offset 1.016) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "Y" (at 0 5.08 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "12MHz" (at 0 -5.08 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "JLCPCB" "C9002" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:Crystal_4Pin_0_1"
+        (polyline (pts (xy -1.27 -2.54) (xy -1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+        (polyline (pts (xy 1.27 -2.54) (xy 1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
+        (rectangle (start -0.635 2.54) (end 0.635 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:Crystal_4Pin_1_1"
+        (pin passive line (at -3.81 0 0) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 3.81 0 180) (length 2.54) (name "3" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 0 -3.81 90) (length 1.27) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 0 -3.81 90) (length 1.27) (name "4" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:USB_A"
+      (pin_names (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J" (at 0 8.89 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "USB_A" (at 0 -8.89 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Connector_USB:USB_A_Molex_67643_Horizontal" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:USB_A_0_1"
+        (rectangle (start -5.08 7.62) (end 5.08 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))
+      )
+      (symbol "usb_msx:USB_A_1_1"
+        (pin power_out line (at 7.62 5.08 180) (length 2.54) (name "VBUS" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 7.62 2.54 180) (length 2.54) (name "D-" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+        (pin bidirectional line (at 7.62 0 180) (length 2.54) (name "D+" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+        (pin power_in line (at 7.62 -2.54 180) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 -5.08 180) (length 2.54) (name "Shield" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:DB9_Male"
+      (pin_names (offset 1.016))
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "J" (at 0 15.24 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "DB9_Male" (at 0 -15.24 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:DB9_Male_0_1"
+        (rectangle (start -5.08 13.97) (end 5.08 -13.97) (stroke (width 0.254) (type default)) (fill (type background)))
+      )
+      (symbol "usb_msx:DB9_Male_1_1"
+        (pin passive line (at 7.62 11.43 180) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 8.89 180) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 6.35 180) (length 2.54) (name "3" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 3.81 180) (length 2.54) (name "4" (effects (font (size 1.016 1.016)))) (number "4" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 1.27 180) (length 2.54) (name "5" (effects (font (size 1.016 1.016)))) (number "5" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 -1.27 180) (length 2.54) (name "6" (effects (font (size 1.016 1.016)))) (number "6" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 -3.81 180) (length 2.54) (name "7" (effects (font (size 1.016 1.016)))) (number "7" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 -6.35 180) (length 2.54) (name "8" (effects (font (size 1.016 1.016)))) (number "8" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 -8.89 180) (length 2.54) (name "9" (effects (font (size 1.016 1.016)))) (number "9" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 7.62 -11.43 180) (length 2.54) (name "10" (effects (font (size 1.016 1.016)))) (number "10" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:SW_Push"
+      (pin_names (offset 1.016) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "SW" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "SW_Push" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:SW_Push_0_1"
+        (circle (center -2.032 0) (radius 0.508) (stroke (width 0) (type default)) (fill (type none)))
+        (circle (center 2.032 0) (radius 0.508) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -1.524 1.016) (xy 1.524 1.016)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy 0 1.016) (xy 0 2.032)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:SW_Push_1_1"
+        (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:C"
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "C" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "C" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Capacitor_SMD:C_0402_1005Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:C_0_1"
+        (polyline (pts (xy 0 1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:C_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 0 -3.81 90) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:R"
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "R" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "R" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Resistor_SMD:R_0402_1005Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:R_0_1"
+        (polyline (pts (xy 0 1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:R_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 0 -3.81 90) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:LED"
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "LED" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "LED_SMD:LED_0603_1608Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:LED_0_1"
+        (polyline (pts (xy 0 1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:LED_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 0 -3.81 90) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:D_Schottky"
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "D" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "D_Schottky" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Diode_SMD:D_SOD-323" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:D_Schottky_0_1"
+        (polyline (pts (xy 0 1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:D_Schottky_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 0 -3.81 90) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:Polyfuse"
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom yes)
+      (on_board yes)
+      (property "Reference" "F" (at 0 2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Value" "Polyfuse" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "Fuse:Fuse_0805_2012Metric" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:Polyfuse_0_1"
+        (polyline (pts (xy 0 1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:Polyfuse_1_1"
+        (pin passive line (at 0 3.81 270) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+        (pin passive line (at 0 -3.81 90) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:+5V"
+      (power)
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom no)
+      (on_board yes)
+      (property "Reference" "#+5V" (at 0 2.54 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+5V" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:+5V_0_1"
+        (polyline (pts (xy 0 0) (xy 0 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -0.762 1.27) (xy 0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:+5V_1_1"
+        (pin power_in line (at 0 0 90) (length 0) (name "+5V" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:+3V3"
+      (power)
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom no)
+      (on_board yes)
+      (property "Reference" "#+3V3" (at 0 2.54 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "+3V3" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:+3V3_0_1"
+        (polyline (pts (xy 0 0) (xy 0 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -0.762 1.27) (xy 0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:+3V3_1_1"
+        (pin power_in line (at 0 0 90) (length 0) (name "+3V3" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+      )
+    )
+    (symbol "usb_msx:GND"
+      (power)
+      (pin_names (offset 0) hide)
+      (exclude_from_sim no)
+      (in_bom no)
+      (on_board yes)
+      (property "Reference" "#GND" (at 0 2.54 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Value" "GND" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
+      (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (symbol "usb_msx:GND_0_1"
+        (polyline (pts (xy 0 0) (xy 0 1.27)) (stroke (width 0) (type default)) (fill (type none)))
+        (polyline (pts (xy -0.762 1.27) (xy 0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
+      )
+      (symbol "usb_msx:GND_1_1"
+        (pin power_in line (at 0 0 90) (length 0) (name "GND" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
+      )
+    )
+  )
+
+  (text "USB-to-MSX Mouse Adapter for Roland S-760" (at 20 15 0) (effects (font (size 2.0 2.0))) (uuid "10e32ea0-f7e3-4012-9d64-4633d1d21bf5"))
+  (text "RP2040 + 74HCT245 + USB-A Host + DB-9 MSX Output" (at 20 20 0) (effects (font (size 2.0 2.0))) (uuid "98b53167-c4e4-4275-801e-8c618d4435b3"))
+  (symbol
+    (lib_id "usb_msx:RP2040")
+    (at 130 100 0)
+    (uuid "fb111476-7f12-4c0c-a1d2-c77f0c5c0c4b")
+        (property "Reference" "U1" (at 132 102 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "RP2040" (at 132 98 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/486d8f82-4f98-4e3a-a5cb-34d4c85d6c45" (reference "U1") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:W25Q16JVSNIQ")
+    (at 130 155 0)
+    (uuid "a1f16eb4-18d5-4cc6-bf06-f9a0db960f71")
+        (property "Reference" "U2" (at 132 157 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "W25Q16JVSNIQ" (at 132 153 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0d80a0bf-8907-44ae-b87f-5835413357bd" (reference "U2") (unit 1))
+      )
+    )
+  )
+  (label "QSPI_SCLK" (at 122.38 121.59 270) (effects (font (size 1.27 1.27))) (uuid "dd15a736-6a9c-447a-853f-feddbe94ddd8"))
+  (label "QSPI_SCLK" (at 117 153.73 0) (effects (font (size 1.27 1.27))) (uuid "011b9806-a2fa-414f-9444-febb3fc4b30b"))
+  (label "QSPI_SD0" (at 124.92 121.59 270) (effects (font (size 1.27 1.27))) (uuid "2ee66db7-0014-444c-b2bb-5a50a678101b"))
+  (label "QSPI_SD0" (at 117 156.27 0) (effects (font (size 1.27 1.27))) (uuid "403acc72-3fb2-4486-a28c-49c78c52520d"))
+  (label "QSPI_SD1" (at 127.46 121.59 270) (effects (font (size 1.27 1.27))) (uuid "c334387c-b841-4891-ba52-7cae5cf51e5e"))
+  (label "QSPI_SD1" (at 143 158.81 180) (effects (font (size 1.27 1.27))) (uuid "da76e82b-1c2c-4688-b71d-6b78292b1f8c"))
+  (label "QSPI_SD2" (at 130 121.59 270) (effects (font (size 1.27 1.27))) (uuid "bde8703c-f5ff-4567-aa3a-d96d1a43b593"))
+  (label "QSPI_SD2" (at 143 156.27 180) (effects (font (size 1.27 1.27))) (uuid "dbf66cf1-3bdd-4398-ad4e-6ef3725b398a"))
+  (label "QSPI_SD3" (at 132.54 121.59 270) (effects (font (size 1.27 1.27))) (uuid "6525cf47-04df-4bce-aeba-9fbd802a8648"))
+  (label "QSPI_SD3" (at 143 153.73 180) (effects (font (size 1.27 1.27))) (uuid "2faedc7d-3602-4baa-961d-3cafa2729a0c"))
+  (label "QSPI_SS" (at 135.08 121.59 270) (effects (font (size 1.27 1.27))) (uuid "dd5227b8-10c8-42a4-8b58-e4191a10176d"))
+  (label "QSPI_SS" (at 117 158.81 0) (effects (font (size 1.27 1.27))) (uuid "f49fd9cc-659c-42c0-88d8-00756827a091"))
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 130 146.11 180)
+    (uuid "93aadace-191d-410a-9a2a-9bf5db6b3c5a")
+    (property "Reference" "#+3V3" (at 130 148.11 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 130 149.11 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/aba5134e-d108-48c7-bf9a-e3c971492962" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 130 163.89 0)
+    (uuid "4b53eda4-a184-4240-81c5-966d240d959a")
+    (property "Reference" "#GND" (at 130 165.89 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 130 166.89 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0431aa50-d5db-4dc3-a060-8d18316cd0b5" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:R")
+    (at 112 150 0)
+    (uuid "e5db9b23-7159-44e5-8e7c-6dc4cff22b6d")
+        (property "Reference" "R6" (at 114 152 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10k" (at 114 148 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0dbdc2da-fb8e-4874-bf9e-e6d02ef82638" (reference "R6") (unit 1))
+      )
+    )
+  )
+  (label "QSPI_SS" (at 112 153.81 90) (effects (font (size 1.27 1.27))) (uuid "89e2489d-6bc1-48fb-88d6-9467452b122f"))
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 112 146.19 180)
+    (uuid "deba0b76-0905-45b8-a485-74e9fc1e6e3a")
+    (property "Reference" "#+3V3" (at 112 148.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 112 149.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0d587358-f3e4-4c42-99ed-f8123263c10c" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:Crystal_4Pin")
+    (at 155 135 0)
+    (uuid "25f7f20c-b94c-4e15-800d-7df4cf8c7f3a")
+        (property "Reference" "Y1" (at 157 137 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "12MHz" (at 157 133 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/c8756997-54b5-41c1-88e6-ae01bf34229e" (reference "Y1") (unit 1))
+      )
+    )
+  )
+  (label "XIN" (at 137.62 121.59 270) (effects (font (size 1.27 1.27))) (uuid "ff973665-63ef-486e-947c-6d792de4c0f4"))
+  (label "XIN" (at 150 135 0) (effects (font (size 1.27 1.27))) (uuid "e26e0191-f486-4b71-91b9-5b179054cc18"))
+  (label "XOUT" (at 140.16 121.59 270) (effects (font (size 1.27 1.27))) (uuid "900072e0-9b62-4f29-948f-ae2d1f456ab6"))
+  (label "XOUT" (at 160 135 180) (effects (font (size 1.27 1.27))) (uuid "c8f1ca80-6aca-4a29-a92f-1c8764add72a"))
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 150 143 0)
+    (uuid "95ade3fc-7a3d-442d-a431-da9e8821ac59")
+        (property "Reference" "C11" (at 152 145 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "27pF" (at 152 141 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/681b8b29-3208-4f97-b1e7-6d5f5e22dcdd" (reference "C11") (unit 1))
+      )
+    )
+  )
+  (label "XIN" (at 150 139.19 90) (effects (font (size 1.27 1.27))) (uuid "5b58f55c-9c35-438f-ac7d-a71ac13e9a88"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 150 146.81 0)
+    (uuid "4eea9a6a-2082-4632-bf20-faae42dfc78f")
+    (property "Reference" "#GND" (at 150 148.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 150 149.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0666e8ee-bf76-460d-987f-08b060d61656" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 160 143 0)
+    (uuid "3160aeab-cb67-45be-966f-f918522a13ce")
+        (property "Reference" "C12" (at 162 145 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "27pF" (at 162 141 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/681951b4-32c6-400a-98cc-9a3517645691" (reference "C12") (unit 1))
+      )
+    )
+  )
+  (label "XOUT" (at 160 139.19 90) (effects (font (size 1.27 1.27))) (uuid "32f52381-809f-45db-aa54-72fb336f4c8a"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 160 146.81 0)
+    (uuid "61ebf5d4-ec0b-4fbe-bd5a-145674af515b")
+    (property "Reference" "#GND" (at 160 148.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 160 149.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/b7d750ac-b2fd-4615-a3e7-aa9d362b1c5a" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 155 138.81 0)
+    (uuid "09e56be2-f811-4b60-b3ab-c7b63dcdac08")
+    (property "Reference" "#GND" (at 155 140.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 155 141.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/9735e0f6-e4d2-45d9-90c0-a8478bdd3679" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 119.84 70.78999999999999 180)
+    (uuid "134549ab-e710-4eca-8cd0-3cea692105b5")
+    (property "Reference" "#+3V3" (at 119.84 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 119.84 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/836997a0-07c9-440a-9810-f21c731802ab" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 122.38 70.78999999999999 180)
+    (uuid "cd98d071-b2a5-49a2-9d62-0310f026afce")
+    (property "Reference" "#+3V3" (at 122.38 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 122.38 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/ff5e8620-4d31-4335-af10-57cb8e2f4b28" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 124.92 70.78999999999999 180)
+    (uuid "8eff7363-c20f-414b-b565-791f3e982720")
+    (property "Reference" "#+3V3" (at 124.92 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 124.92 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/659ee4fa-dd60-4bd0-8e6c-f429be3852eb" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 127.46 70.78999999999999 180)
+    (uuid "15461c2e-7c80-47ce-a05a-c7738d938b15")
+    (property "Reference" "#+3V3" (at 127.46 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 127.46 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/11e56884-ada9-41ea-92d8-8ad321170184" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 130 70.78999999999999 180)
+    (uuid "d8edad95-2150-4f54-bbb4-9ca081bfaa63")
+    (property "Reference" "#+3V3" (at 130 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 130 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/9589192e-ec91-4c3f-a0c7-6a08ea3d43f6" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 132.54 70.78999999999999 180)
+    (uuid "f5ceb6a0-f9fd-496b-a40a-b454b4264414")
+    (property "Reference" "#+3V3" (at 132.54 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 132.54 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/16288d9f-daba-4555-a634-f804ef80c5a5" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 135.08 70.78999999999999 180)
+    (uuid "11306395-85be-4901-9a39-59fb2ce6edbc")
+    (property "Reference" "#+3V3" (at 135.08 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 135.08 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/2a48b44a-11a1-4133-984b-157dcc99d7c6" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 137.62 70.78999999999999 180)
+    (uuid "a4e90ea9-be15-4a0c-b80a-ec452870af42")
+    (property "Reference" "#+3V3" (at 137.62 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 137.62 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/acc9fb0d-19a3-4a69-a7f8-745ecfaac536" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 140.16 70.78999999999999 180)
+    (uuid "a1e98264-8875-460f-bafe-40c9e4e02e7b")
+    (property "Reference" "#+3V3" (at 140.16 72.78999999999999 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 140.16 73.78999999999999 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/a6197b02-fe33-48c4-8a9b-36115e0b61d0" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (label "DVDD" (at 117.3 126.67 270) (effects (font (size 1.27 1.27))) (uuid "f28b3084-bc11-40a1-91ae-823b8c875e19"))
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 122.38 130 180)
+    (uuid "7880b691-cd99-4892-9e9c-060127ac0531")
+    (property "Reference" "#+3V3" (at 122.38 132 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 122.38 133 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/38ae19c4-151f-4780-b461-3d891eb13220" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 122.38 126.67) (xy 122.38 130)) (stroke (width 0) (type default)) (uuid "3fda2831-069c-4e2c-b8b3-428cc1ef346d"))
+  (label "VREG_VOUT" (at 127.46 126.67 270) (effects (font (size 1.27 1.27))) (uuid "02aea1bd-c777-4568-8fc2-2a63ad46ee41"))
+  (label "DVDD" (at 127.46 130 270) (effects (font (size 1.27 1.27))) (uuid "bfa05038-ac8a-4a3e-885a-acbdbf95d9fe"))
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 122 133 0)
+    (uuid "1b21c21e-609e-410e-8f16-25bfb3216ecf")
+        (property "Reference" "C13" (at 124 135 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF" (at 124 131 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0b0b8483-42e8-45a8-b22c-0b34fdb56b46" (reference "C13") (unit 1))
+      )
+    )
+  )
+  (label "DVDD" (at 122 129.19 90) (effects (font (size 1.27 1.27))) (uuid "588a3f18-56de-48df-b398-2eed9102c487"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 122 136.81 0)
+    (uuid "e459e316-e72b-43d0-a494-3e0a8ae0b07a")
+    (property "Reference" "#GND" (at 122 138.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 122 139.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/9a33cdc5-d011-4e0a-ac70-2c9c25c4a329" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 132.54 130 0)
+    (uuid "2d85daaa-4179-4245-9879-af2b46790d0a")
+    (property "Reference" "#GND" (at 132.54 132 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 132.54 133 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/db108b7e-3c67-4d9c-8212-c21e0f765c60" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 132.54 126.67) (xy 132.54 130)) (stroke (width 0) (type default)) (uuid "f1ad6f39-6f95-4b26-b1e7-906c8f8451ce"))
+  (symbol
+    (lib_id "usb_msx:R")
+    (at 142 133 0)
+    (uuid "eba93ac8-97b8-4264-ba96-1b4e85d0fed2")
+        (property "Reference" "R7" (at 144 135 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "10k" (at 144 131 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/79ad31c5-cea5-4462-bdb3-f9a9ea8b9268" (reference "R7") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 142 129.19 180)
+    (uuid "c73496b0-3204-4cfe-a94d-8f8c404cda9b")
+    (property "Reference" "#+3V3" (at 142 131.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 142 132.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/46d37188-368a-4d73-925d-4e136e9c98b8" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 137.62 126.67) (xy 142 126.67)) (stroke (width 0) (type default)) (uuid "243c9916-a03c-4056-963c-3cf50c4e8fcb"))
+  (wire (pts (xy 142 126.67) (xy 142 136.81)) (stroke (width 0) (type default)) (uuid "d215fa11-c172-4d9d-9dcc-c34f92e4d45b"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 142.7 130 0)
+    (uuid "4750b68a-4b90-40ff-bfc3-a31246d78727")
+    (property "Reference" "#GND" (at 142.7 132 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 142.7 133 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/e860af83-5cca-4779-a499-eeec03a6a1be" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 142.7 126.67) (xy 142.7 130)) (stroke (width 0) (type default)) (uuid "8c0aaf6a-aec5-4b2a-840c-31e224700c94"))
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 100 62 0)
+    (uuid "e7e4a005-8182-4ddc-8a4e-e1e9bde685f3")
+        (property "Reference" "C1" (at 102 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 102 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/6222c264-5516-4689-8a26-728e5476945a" (reference "C1") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 100 58.19 180)
+    (uuid "58f1de3a-e3fa-4356-9631-7bec8c993986")
+    (property "Reference" "#+3V3" (at 100 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 100 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0605e1b9-cc73-4eb6-9bac-14595ab3cc2b" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 100 65.81 0)
+    (uuid "9d1872b4-9518-4f46-91b9-6be886ead1a7")
+    (property "Reference" "#GND" (at 100 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 100 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/2e45402a-e186-464e-811c-81d2ddf0fb6e" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 103 62 0)
+    (uuid "38fe45fa-4e77-4d5f-b6ad-f9d5ee418a61")
+        (property "Reference" "C2" (at 105 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 105 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/b4e166b2-1a63-43ce-b0e8-6efd2e7928f1" (reference "C2") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 103 58.19 180)
+    (uuid "e7679808-ee88-429c-b38e-276a5d575a0b")
+    (property "Reference" "#+3V3" (at 103 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 103 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/45e0e6a1-6175-4742-b2b6-f934f401632d" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 103 65.81 0)
+    (uuid "a79a6b32-43a0-4ad9-b7b9-36b5b3ea8bce")
+    (property "Reference" "#GND" (at 103 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 103 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/4f7c71bc-609b-43ec-86aa-8c1665c6658b" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 106 62 0)
+    (uuid "f8d2b35f-532b-4742-ad29-356d458260e6")
+        (property "Reference" "C3" (at 108 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 108 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/abfe26b1-4db3-40b3-9dd9-dc7fcd837873" (reference "C3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 106 58.19 180)
+    (uuid "ef29a153-6ce6-4e14-bbed-fe0e01c69f82")
+    (property "Reference" "#+3V3" (at 106 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 106 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/640484f3-2474-4d8b-9a8f-b928c503d41a" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 106 65.81 0)
+    (uuid "3d08c7f5-1931-4b01-9882-44bad37c8add")
+    (property "Reference" "#GND" (at 106 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 106 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/27074c41-8cd1-44c0-8347-1ba6f8979a97" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 109 62 0)
+    (uuid "a08f6112-3da0-4d5d-a2ef-821a3a1452f2")
+        (property "Reference" "C4" (at 111 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 111 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/39edb55f-e907-4803-92f8-d5226d76f91d" (reference "C4") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 109 58.19 180)
+    (uuid "708fd9d7-e323-443a-9497-02d5e48c010c")
+    (property "Reference" "#+3V3" (at 109 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 109 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/72d2761f-2f54-4e66-b06d-8d65ac141530" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 109 65.81 0)
+    (uuid "6e31f64c-6edc-49d8-b36e-d3912c1e3a6f")
+    (property "Reference" "#GND" (at 109 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 109 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/91b7e11e-d2a9-484c-a14f-46380d9b4f21" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 112 62 0)
+    (uuid "3cbd0f65-45ed-4703-a55f-2fcb3c27993e")
+        (property "Reference" "C5" (at 114 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 114 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/4cfc2c74-5ef7-485f-80a9-8de9abcb0e37" (reference "C5") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 112 58.19 180)
+    (uuid "16d96805-3cde-4a76-9703-700087bf5b85")
+    (property "Reference" "#+3V3" (at 112 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 112 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/e99c7bae-6f1e-4d20-af7c-ed2f5cb90be8" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 112 65.81 0)
+    (uuid "178a1c65-a4f2-4a88-85f8-faf375d4af77")
+    (property "Reference" "#GND" (at 112 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 112 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/4f88c343-07b9-48ae-b5a1-9c15f41c2875" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 115 62 0)
+    (uuid "cbefd119-1234-48c1-b6ef-e5d22e2b1638")
+        (property "Reference" "C6" (at 117 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 117 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/6d8aaf0f-6545-4d2f-9cb3-d9e88f6b9f6a" (reference "C6") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 115 58.19 180)
+    (uuid "4efd2b74-3d8e-48d9-a12e-01c2ee2fa6ae")
+    (property "Reference" "#+3V3" (at 115 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 115 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/2f836771-49fa-487d-9387-3edd8edb9e02" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 115 65.81 0)
+    (uuid "f5065815-302d-4fc2-afe1-dea9af02e69e")
+    (property "Reference" "#GND" (at 115 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 115 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/c3d80ade-9204-44fa-a9ba-0773fee9b237" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 118 62 0)
+    (uuid "2adcd675-7cd6-44ea-87e9-848f390f7025")
+        (property "Reference" "C7" (at 120 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 120 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/b7b855f9-1674-4253-9504-0cb1dd49781a" (reference "C7") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 118 58.19 180)
+    (uuid "41c2ca5b-a0a1-452c-bab5-76573f84c671")
+    (property "Reference" "#+3V3" (at 118 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 118 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/7eb90797-e75b-456d-9ad7-c28a1f674509" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 118 65.81 0)
+    (uuid "60678046-8965-4037-af53-315b7f658dfe")
+    (property "Reference" "#GND" (at 118 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 118 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/dbbf083b-6ea0-4414-9886-b35d82bf68b7" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 121 62 0)
+    (uuid "d8f348b4-eb10-4647-89ff-b41426738706")
+        (property "Reference" "C8" (at 123 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 123 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/e644cacd-0e8e-4a89-ac75-6ee8aff2b234" (reference "C8") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 121 58.19 180)
+    (uuid "cf8b8989-a585-4b01-9200-dba0cf0efc63")
+    (property "Reference" "#+3V3" (at 121 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 121 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/981adc59-170a-4961-bfab-d621c565ba9f" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 121 65.81 0)
+    (uuid "08f27b16-e132-433e-a786-d68926c3f085")
+    (property "Reference" "#GND" (at 121 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 121 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/0165eb7f-6431-41f4-a08c-ca76cf111672" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 124 62 0)
+    (uuid "f8da993e-d1c9-4832-80d0-28b6017fb352")
+        (property "Reference" "C9" (at 126 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "100nF" (at 126 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/39d38b20-29bd-4bf9-828c-fc3ec8a56dbc" (reference "C9") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 124 58.19 180)
+    (uuid "0392db6f-53c1-4808-a399-ae72cbcf096b")
+    (property "Reference" "#+3V3" (at 124 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 124 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/4e0c8bad-263c-4bc9-9622-baf7e838c963" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 124 65.81 0)
+    (uuid "b8835db8-60c3-4262-8fbb-5bfbd8025458")
+    (property "Reference" "#GND" (at 124 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 124 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/123f7b45-9c10-4295-8ed4-63415064b635" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 128 62 0)
+    (uuid "2a0343dc-796d-4a36-b82a-a28f0d1d4fff")
+        (property "Reference" "C14" (at 130 64 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF" (at 130 60 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/68876065-6c57-4a89-9a1c-95d47f1af941" (reference "C14") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 128 58.19 180)
+    (uuid "af8920e5-1d84-462a-80aa-d86c63666abb")
+    (property "Reference" "#+3V3" (at 128 60.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 128 61.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/3417edcb-84c0-4316-b77e-70d94f74bd12" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 128 65.81 0)
+    (uuid "a5619c1f-04cf-4f80-a09b-8d4be889394d")
+    (property "Reference" "#GND" (at 128 67.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 128 68.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/03ddd4a4-9bbe-419e-a52a-5edcc530ae26" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:SW_Push")
+    (at 100 155 0)
+    (uuid "f69221b7-55f7-44b4-a2fc-a19a2805e8b8")
+        (property "Reference" "SW1" (at 102 157 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "BOOTSEL" (at 102 153 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/ab990270-9ee3-4133-ac94-1962e39b007d" (reference "SW1") (unit 1))
+      )
+    )
+  )
+  (label "QSPI_SS" (at 93 155 0) (effects (font (size 1.27 1.27))) (uuid "4cd3a23b-a705-4425-b4f5-73fd81fbf4bb"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 107 155 0)
+    (uuid "56ea3fcf-2276-4bad-b3b4-5f5771aeaae8")
+    (property "Reference" "#GND" (at 107 157 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 107 158 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/eb326efd-aa68-48b7-97cf-ceb17f86a316" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:USB_A")
+    (at 40 85 0)
+    (uuid "ec10ac59-2daf-4e3b-9fcd-80b5eb4b79f6")
+        (property "Reference" "J1" (at 42 87 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "USB_A" (at 42 83 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/6576b5fe-da90-496d-93f1-f07ac48af8f1" (reference "J1") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:Polyfuse")
+    (at 58 75 0)
+    (uuid "0d6c85dd-c6c6-491f-8c72-5d4767409d0c")
+        (property "Reference" "F1" (at 60 77 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "500mA" (at 60 73 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/b9a754bd-4e62-4127-84b5-c3df2ef6e57b" (reference "F1") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+5V")
+    (at 58 71.19 180)
+    (uuid "3255bd74-9931-4ce5-8a85-451866c823cf")
+    (property "Reference" "#+5V" (at 58 73.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 58 74.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/a72062bf-4b51-49c4-9828-b556878ce247" (reference "#+5V") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 47.62 90.08) (xy 58 90.08)) (stroke (width 0) (type default)) (uuid "73b0ba5a-5c4e-42ce-86ef-10eb6344c11a"))
+  (wire (pts (xy 58 90.08) (xy 58 78.81)) (stroke (width 0) (type default)) (uuid "9b1e457c-7039-4335-9817-6334a053d247"))
+  (symbol
+    (lib_id "usb_msx:R")
+    (at 65 83 0)
+    (uuid "2d983bac-25db-4e69-a739-e2b35ed7bb7f")
+        (property "Reference" "R1" (at 67 85 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "27R" (at 67 81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/c5a1a931-f99c-40d8-af98-dc9456601ed1" (reference "R1") (unit 1))
+      )
+    )
+  )
+  (label "USB_DM" (at 65 79.19 90) (effects (font (size 1.27 1.27))) (uuid "6b6ead6f-a001-4c22-ad30-8080183af612"))
+  (wire (pts (xy 47.62 87.54) (xy 65 87.54)) (stroke (width 0) (type default)) (uuid "bc939432-bb5c-4ac7-96ce-5805d67c0a04"))
+  (wire (pts (xy 65 87.54) (xy 65 86.81)) (stroke (width 0) (type default)) (uuid "a120ccee-ab79-47bb-9f88-148bb6daf743"))
+  (symbol
+    (lib_id "usb_msx:R")
+    (at 72 83 0)
+    (uuid "d1a5537b-fc90-46cd-a759-c5e673727965")
+        (property "Reference" "R2" (at 74 85 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "27R" (at 74 81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/da222d51-1a97-4755-abab-7ee185bd7767" (reference "R2") (unit 1))
+      )
+    )
+  )
+  (label "USB_DP" (at 72 79.19 90) (effects (font (size 1.27 1.27))) (uuid "3e26e2e8-01bc-4e83-87e1-e084b3648d77"))
+  (wire (pts (xy 47.62 85) (xy 72 85)) (stroke (width 0) (type default)) (uuid "7353cb6f-7f93-4373-b6dd-3a10b49cdbfb"))
+  (wire (pts (xy 72 85) (xy 72 86.81)) (stroke (width 0) (type default)) (uuid "415224ec-3df2-4bc1-804e-ae98c536157b"))
+  (label "USB_DM" (at 117.3 121.59 270) (effects (font (size 1.27 1.27))) (uuid "09c4b2e4-4eee-4cc0-85f5-ab2783e72a50"))
+  (label "USB_DP" (at 119.84 121.59 270) (effects (font (size 1.27 1.27))) (uuid "ca1d1a50-8832-4c45-8a8a-83f9cd3c5b4f"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 50.62 92.54 0)
+    (uuid "fc24def8-b331-45f5-b4b3-165eb381680b")
+    (property "Reference" "#GND" (at 50.62 94.54 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 50.62 95.54 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/9742eb36-9628-41d0-86fd-8bd6845d82a1" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 47.62 87.54) (xy 50.62 87.54)) (stroke (width 0) (type default)) (uuid "1c0b97ef-63e5-42dd-81f5-8b9a1f0ec1da"))
+  (wire (pts (xy 47.62 90.08) (xy 50.62 90.08)) (stroke (width 0) (type default)) (uuid "90cb91f5-ebd0-45b7-9d2b-c8962782ad3d"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 50.62 92.08 0)
+    (uuid "3c9fa012-f592-4bfd-a611-97245438784d")
+    (property "Reference" "#GND" (at 50.62 94.08 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 50.62 95.08 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/3d3abd03-f4b4-4c35-a0f5-185891de6fbf" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:74HCT245")
+    (at 200 100 0)
+    (uuid "76290b97-ac53-4767-b009-b446c5c4ce5f")
+        (property "Reference" "U3" (at 202 102 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "74HCT245" (at 202 98 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/06e45602-0131-45fd-a467-259e9387b28f" (reference "U3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+5V")
+    (at 200 82.22 180)
+    (uuid "a4c707e0-8ba3-4f7d-ad36-844e5aa3257f")
+    (property "Reference" "#+5V" (at 200 84.22 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 200 85.22 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/11dade19-75ed-4ead-86e8-a7af6f1b15b3" (reference "#+5V") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 200 117.78 0)
+    (uuid "5128c9dc-b730-49ae-96d5-61fb8a685156")
+    (property "Reference" "#GND" (at 200 119.78 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 200 120.78 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/5bb005bb-c3ac-4e9b-991e-25fedd65c287" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 185 87.3 0)
+    (uuid "8188e9ba-d2a8-4e39-bb6c-34611d61474c")
+    (property "Reference" "#GND" (at 185 89.3 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 185 90.3 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/a51108bd-ca51-445b-a88a-57aa443323d7" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 187.3 87.3) (xy 185 87.3)) (stroke (width 0) (type default)) (uuid "83587458-a3af-4170-a252-0e745b804d2c"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 185 110.16 0)
+    (uuid "89b75eaf-c317-4486-8f07-0a128b84a94a")
+    (property "Reference" "#GND" (at 185 112.16 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 185 113.16 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/132cfd84-28b4-4ce7-8a40-4389b81dd22e" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 187.3 110.16) (xy 185 110.16)) (stroke (width 0) (type default)) (uuid "5adbe5e2-eb70-42a0-8f81-bf5943e9b004"))
+  (label "GPIO2" (at 185 110.16 0) (effects (font (size 1.27 1.27))) (uuid "ee216b32-4225-4a09-a713-32df838c594a"))
+  (wire (pts (xy 185 110.16) (xy 187.3 110.16)) (stroke (width 0) (type default)) (uuid "492fa2a4-288f-40c2-b72e-d4549ab3a1e2"))
+  (label "GPIO3" (at 185 107.62 0) (effects (font (size 1.27 1.27))) (uuid "123b9a46-460a-4707-950f-75ebe3950184"))
+  (wire (pts (xy 185 107.62) (xy 187.3 107.62)) (stroke (width 0) (type default)) (uuid "b22228df-1ae5-4a23-82cf-fea2623bc3df"))
+  (label "GPIO4" (at 185 105.08 0) (effects (font (size 1.27 1.27))) (uuid "cdc047fe-4cfa-4ecd-abbd-39d5c1e50052"))
+  (wire (pts (xy 185 105.08) (xy 187.3 105.08)) (stroke (width 0) (type default)) (uuid "768e1c6f-d460-46a1-bc94-1d3e182fd822"))
+  (label "GPIO5" (at 185 102.54 0) (effects (font (size 1.27 1.27))) (uuid "f7924523-b2ac-41dc-8ec7-89b0715f39c5"))
+  (wire (pts (xy 185 102.54) (xy 187.3 102.54)) (stroke (width 0) (type default)) (uuid "b387248d-06e7-4c91-ba00-b3026309660f"))
+  (label "GPIO6" (at 185 100 0) (effects (font (size 1.27 1.27))) (uuid "a9074237-b527-4408-885b-db6627ac2974"))
+  (wire (pts (xy 185 100) (xy 187.3 100)) (stroke (width 0) (type default)) (uuid "fcd6e5c4-f5f8-4051-b1b9-82169ea0f1df"))
+  (label "GPIO7" (at 185 97.46 0) (effects (font (size 1.27 1.27))) (uuid "e60d70e7-a437-44c0-a3bc-5fe340183c4f"))
+  (wire (pts (xy 185 97.46) (xy 187.3 97.46)) (stroke (width 0) (type default)) (uuid "13d8de0b-2704-49c5-92a0-48ed280910e9"))
+  (label "GPIO2" (at 111 82.22 0) (effects (font (size 1.27 1.27))) (uuid "f322a7ae-8bf2-44e6-812f-07b1a2ec79dc"))
+  (wire (pts (xy 111 82.22) (xy 113.49 82.22)) (stroke (width 0) (type default)) (uuid "0dd18d48-d2cc-44fa-b91f-40dcae64776b"))
+  (label "GPIO3" (at 111 84.76 0) (effects (font (size 1.27 1.27))) (uuid "cc321be5-44a2-422a-b8ac-fa56a61414ff"))
+  (wire (pts (xy 111 84.76) (xy 113.49 84.76)) (stroke (width 0) (type default)) (uuid "dfcca348-1a6d-4919-9908-d778ce1cd0a2"))
+  (label "GPIO4" (at 111 87.3 0) (effects (font (size 1.27 1.27))) (uuid "f5917711-4cf8-443f-a0b3-87802f110e17"))
+  (wire (pts (xy 111 87.3) (xy 113.49 87.3)) (stroke (width 0) (type default)) (uuid "ae60860a-c092-4784-ac90-12e0c7e0840b"))
+  (label "GPIO5" (at 111 89.84 0) (effects (font (size 1.27 1.27))) (uuid "2a32d8f7-ce9a-4392-9e45-7122322c49b7"))
+  (wire (pts (xy 111 89.84) (xy 113.49 89.84)) (stroke (width 0) (type default)) (uuid "bbf17349-a9ed-4315-a122-e91aedee2703"))
+  (label "GPIO6" (at 111 92.38 0) (effects (font (size 1.27 1.27))) (uuid "5bd55616-31e9-45c5-b574-6b3070a2769d"))
+  (wire (pts (xy 111 92.38) (xy 113.49 92.38)) (stroke (width 0) (type default)) (uuid "1dce410a-2881-4e1c-a3e9-0ff48a28ada3"))
+  (label "GPIO7" (at 111 94.92 0) (effects (font (size 1.27 1.27))) (uuid "e7942350-f872-476b-990c-2a93b36df78d"))
+  (wire (pts (xy 111 94.92) (xy 113.49 94.92)) (stroke (width 0) (type default)) (uuid "50f6cf94-4923-43eb-b022-05452c778b25"))
+  (label "GPIO8" (at 111 97.46 0) (effects (font (size 1.27 1.27))) (uuid "27d286f4-ccf6-452b-ae1e-7f3a03ea74f2"))
+  (wire (pts (xy 111 97.46) (xy 113.49 97.46)) (stroke (width 0) (type default)) (uuid "3dd080c8-13b4-4a44-bc31-0f21b596fa10"))
+  (label "GPIO25" (at 149 100 180) (effects (font (size 1.27 1.27))) (uuid "aa85b699-1b74-472f-8bf6-61066116b22b"))
+  (wire (pts (xy 146.51 100) (xy 149 100)) (stroke (width 0) (type default)) (uuid "5afece51-1c34-47cb-8957-59724772f09a"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 185 105.08 0)
+    (uuid "cb5ca7aa-2c1e-4080-8393-9ead4f8d0e1b")
+    (property "Reference" "#GND" (at 185 107.08 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 185 108.08 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/16f80a79-da98-4425-b0b8-7285cfac7386" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 187.3 105.08) (xy 185 105.08)) (stroke (width 0) (type default)) (uuid "1d4fdcf7-c577-4ee6-bcd9-6af58509208b"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 185 107.62 0)
+    (uuid "8dfe6ef1-069a-4de4-be1d-906c8de77664")
+    (property "Reference" "#GND" (at 185 109.62 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 185 110.62 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/f57dda87-fe4d-4c2b-bd09-1a950b8c4a2b" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 187.3 107.62) (xy 185 107.62)) (stroke (width 0) (type default)) (uuid "42025d62-3618-4750-a0af-a6f0ae156e61"))
+  (no_connect (at 212.7 105.08) (uuid "48bfd084-0b62-47d9-88fe-3de2f0eb351d"))
+  (no_connect (at 212.7 107.62) (uuid "6b2327a8-2478-4182-b6bf-df434e17d33b"))
+  (symbol
+    (lib_id "usb_msx:DB9_Male")
+    (at 260 100 0)
+    (uuid "4e5f2e19-b08d-4581-8aec-cecb0020235f")
+        (property "Reference" "J2" (at 262 102 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "DB9_Male_MSX" (at 262 98 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/2c430409-4055-410c-a2ce-2eb41467ef76" (reference "J2") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 212.7 89.84) (xy 255 89.84)) (stroke (width 0) (type default)) (uuid "ab38859d-8847-413f-b681-ed4457af2440"))
+  (wire (pts (xy 255 89.84) (xy 255 88.57)) (stroke (width 0) (type default)) (uuid "15f4ec89-0eae-4316-90ec-77a3bccaee42"))
+  (wire (pts (xy 255 88.57) (xy 267.62 88.57)) (stroke (width 0) (type default)) (uuid "7e3c0b47-0b72-44f7-b82d-633ec03daa4c"))
+  (text "Data 0" (at 272 88.57 0) (effects (font (size 1.0 1.0))) (uuid "f482d7e3-a6f4-4bb9-ab3b-1515e0d7a1be"))
+  (wire (pts (xy 212.7 92.38) (xy 253 92.38)) (stroke (width 0) (type default)) (uuid "732eab24-d7fb-493c-a9c1-172ea8e755fa"))
+  (wire (pts (xy 253 92.38) (xy 253 91.11)) (stroke (width 0) (type default)) (uuid "f66e91cc-a3d3-46a9-8949-1c63df914ea2"))
+  (wire (pts (xy 253 91.11) (xy 267.62 91.11)) (stroke (width 0) (type default)) (uuid "e7961455-20fb-4e3d-82b2-feec26df48b3"))
+  (text "Data 1" (at 272 91.11 0) (effects (font (size 1.0 1.0))) (uuid "2909d8e8-f089-4796-a8b8-a074b681072a"))
+  (wire (pts (xy 212.7 94.92) (xy 251 94.92)) (stroke (width 0) (type default)) (uuid "07eab882-53c1-4657-bb73-b1c6ec5a2a45"))
+  (wire (pts (xy 251 94.92) (xy 251 93.65)) (stroke (width 0) (type default)) (uuid "06e566ca-0ec5-486c-b023-cc4fb54d053b"))
+  (wire (pts (xy 251 93.65) (xy 267.62 93.65)) (stroke (width 0) (type default)) (uuid "6b9f17c7-1d6b-43d5-99bc-e4f494f384cd"))
+  (text "Data 2" (at 272 93.65 0) (effects (font (size 1.0 1.0))) (uuid "3396b0da-35c1-42b8-a637-eda61332a5e2"))
+  (wire (pts (xy 212.7 97.46) (xy 249 97.46)) (stroke (width 0) (type default)) (uuid "32a5e135-7931-4e3a-97d3-925b21c04907"))
+  (wire (pts (xy 249 97.46) (xy 249 96.19)) (stroke (width 0) (type default)) (uuid "0082708b-258a-4c4a-8ca6-6af0e7bd4896"))
+  (wire (pts (xy 249 96.19) (xy 267.62 96.19)) (stroke (width 0) (type default)) (uuid "45349bae-f667-434b-a50e-d81988e45f5f"))
+  (text "Data 3" (at 272 96.19 0) (effects (font (size 1.0 1.0))) (uuid "2ddaf0a6-7439-4d04-9abd-23f35a905bb8"))
+  (symbol
+    (lib_id "usb_msx:D_Schottky")
+    (at 280 98.73 0)
+    (uuid "a2efff75-2049-443e-9b7e-b42c9a007ce6")
+        (property "Reference" "D1" (at 282 100.73 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "BAT54" (at 282 96.73 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/1ded6651-bc93-4e00-92fb-82869c7aa98a" (reference "D1") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 267.62 98.73) (xy 280 102.54)) (stroke (width 0) (type default)) (uuid "880f27e7-7ae6-4e08-835c-2ec361f26410"))
+  (symbol
+    (lib_id "usb_msx:+5V")
+    (at 280 94.92 180)
+    (uuid "65b40463-a6d0-46e2-8a73-ee4877914982")
+    (property "Reference" "#+5V" (at 280 96.92 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 280 97.92 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/e1762dc0-5d91-4a83-aba2-9f489b5a0be0" (reference "#+5V") (unit 1))
+      )
+    )
+  )
+  (text "+5V from S-760" (at 272 98.73 0) (effects (font (size 1.0 1.0))) (uuid "0a1d3627-64db-4d34-a708-469e757a63a4"))
+  (wire (pts (xy 212.7 100) (xy 247 100)) (stroke (width 0) (type default)) (uuid "b7e33306-56d8-4b04-8024-e93e37f5ab41"))
+  (wire (pts (xy 247 100) (xy 247 101.27)) (stroke (width 0) (type default)) (uuid "c0681477-f2ba-45b2-ac19-b0e3cf2cf8c7"))
+  (wire (pts (xy 247 101.27) (xy 267.62 101.27)) (stroke (width 0) (type default)) (uuid "fe2fef8e-51b4-41cc-88a5-cef8bbbd31c2"))
+  (text "Left btn" (at 272 101.27 0) (effects (font (size 1.0 1.0))) (uuid "a741f56a-95af-423a-a543-f8ad34d35ff8"))
+  (wire (pts (xy 212.7 102.54) (xy 245 102.54)) (stroke (width 0) (type default)) (uuid "0be62c01-db73-4486-801a-41d5d91becc5"))
+  (wire (pts (xy 245 102.54) (xy 245 103.81)) (stroke (width 0) (type default)) (uuid "93241ae0-05c8-42d5-9d59-bd475c2bec64"))
+  (wire (pts (xy 245 103.81) (xy 267.62 103.81)) (stroke (width 0) (type default)) (uuid "bcd7d3fe-d09e-4f01-a82c-abe3a75c4d0b"))
+  (text "Right btn" (at 272 103.81 0) (effects (font (size 1.0 1.0))) (uuid "7621deff-b505-4fa1-bce2-1c58da538d45"))
+  (symbol
+    (lib_id "usb_msx:R")
+    (at 285 110 0)
+    (uuid "d092329c-963b-4ae5-b1fc-c9acb39994fd")
+        (property "Reference" "R3" (at 287 112 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "2.2k" (at 287 108 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/a3042e51-3e3e-4765-96ce-b82670b01fc0" (reference "R3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:R")
+    (at 285 120 0)
+    (uuid "97c12e37-ba1f-467e-b71b-c3955049491d")
+        (property "Reference" "R4" (at 287 122 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "3.3k" (at 287 118 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/10b989c5-f30f-4324-8381-5265a6c0cebb" (reference "R4") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 267.62 106.35) (xy 285 106.35)) (stroke (width 0) (type default)) (uuid "c2a48748-f57e-4fab-a7e3-a744fa879e9d"))
+  (wire (pts (xy 285 106.35) (xy 285 106.19)) (stroke (width 0) (type default)) (uuid "edef9293-f796-488f-a53e-bd912540c7cf"))
+  (wire (pts (xy 285 113.81) (xy 285 116.19)) (stroke (width 0) (type default)) (uuid "713a06cf-674e-4dc3-a37a-99e81bd9b45b"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 285 123.81 0)
+    (uuid "bd78509b-86bd-440e-8dc5-0daf325e8d25")
+    (property "Reference" "#GND" (at 285 125.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 285 126.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/2bd18374-ccda-4bf9-ae70-ffc85780bdcc" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (label "GPIO8" (at 290 115 180) (effects (font (size 1.27 1.27))) (uuid "cc9d3899-afd4-4875-a1d0-4991d8446592"))
+  (wire (pts (xy 285 115) (xy 290 115)) (stroke (width 0) (type default)) (uuid "f92ee677-7272-49ef-a3ed-24e36c8774e7"))
+  (junction (at 285 115) (diameter 0) (color 0 0 0 0) (uuid "f3dd5c68-b850-41e2-951b-60ce39a4a621"))
+  (text "Strobe (5V→3V divider)" (at 272 106.35 0) (effects (font (size 1.0 1.0))) (uuid "7c7faa3f-9f17-4ed8-a464-cffdc725ac7a"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 272 111.43 0)
+    (uuid "10d73902-9b10-4c79-ab04-f7a14c4a5be2")
+    (property "Reference" "#GND" (at 272 113.43 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 272 114.43 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/ed0af419-b70a-4168-a144-d3e31181f054" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 267.62 111.43) (xy 272 111.43)) (stroke (width 0) (type default)) (uuid "95d3d567-93e0-4039-9ba8-1ab6686921c6"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 272 113.97 0)
+    (uuid "e3e64c8d-f595-4217-89e7-86e473ecc9e4")
+    (property "Reference" "#GND" (at 272 115.97 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 272 116.97 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/4c3a48eb-9d42-49b7-9cb5-919544fecebf" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 267.62 113.97) (xy 272 113.97)) (stroke (width 0) (type default)) (uuid "1b993b89-c8cf-4f57-9608-7be5568e934a"))
+  (symbol
+    (lib_id "usb_msx:XC6206P332MR")
+    (at 130 35 0)
+    (uuid "b0b2b563-6592-43b8-82c1-d7c413710ee7")
+        (property "Reference" "U4" (at 132 37 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "XC6206P332MR" (at 132 33 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/fa2138f1-467d-4934-84b0-e14e5b88c999" (reference "U4") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+5V")
+    (at 118 35 90)
+    (uuid "3953fef1-3656-49e1-b65f-f2fe986fc48c")
+    (property "Reference" "#+5V" (at 118 37 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 118 38 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/1d900aea-4a8c-46bd-8314-52a081007f8a" (reference "#+5V") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 119.84 35) (xy 118 35)) (stroke (width 0) (type default)) (uuid "7a58c598-ac77-4c7b-8e9d-d85bd624eb48"))
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 142 35 270)
+    (uuid "83df755f-9648-4c0c-9c9f-264a4b456bcc")
+    (property "Reference" "#+3V3" (at 142 37 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 142 38 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/3fb9e3f9-1f96-469d-843c-ad13000604b4" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 140.16 35) (xy 142 35)) (stroke (width 0) (type default)) (uuid "7ebfc185-8b01-4d96-b668-fb0aa49fe8e2"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 130 43.89 0)
+    (uuid "ae261c33-b094-43b2-84ac-a010e0b7618e")
+    (property "Reference" "#GND" (at 130 45.89 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 130 46.89 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/acadbfe0-a1e0-4f97-8ff6-b90bb0b2db4c" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 112 43 0)
+    (uuid "61826697-dc1f-4388-972e-a0119a0f290e")
+        (property "Reference" "C15" (at 114 45 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF" (at 114 41 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/2be181b4-d7a1-4048-959f-674a4b2a2665" (reference "C15") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+5V")
+    (at 112 39.19 180)
+    (uuid "fb3fb4ea-63ea-4ca5-af51-eea4879f3f0c")
+    (property "Reference" "#+5V" (at 112 41.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+5V" (at 112 42.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/53d4e80f-3395-4bd9-8295-4c38390951e1" (reference "#+5V") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 112 46.81 0)
+    (uuid "c74040b7-e063-4814-aece-eaa2fd775444")
+    (property "Reference" "#GND" (at 112 48.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 112 49.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/50958ccf-8b42-4374-8bb0-1e5b82f68b84" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:C")
+    (at 148 43 0)
+    (uuid "a9e072bd-a470-4f8c-b49b-0b5b0c564ace")
+        (property "Reference" "C16" (at 150 45 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1uF" (at 150 41 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/a7b23c24-5389-421a-be10-550465b76dba" (reference "C16") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:+3V3")
+    (at 148 39.19 180)
+    (uuid "54f1fc14-1132-421e-92e9-acf9d4a00940")
+    (property "Reference" "#+3V3" (at 148 41.19 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "+3V3" (at 148 42.19 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/67b1cab6-06d9-48eb-8573-7eb3e1ff0662" (reference "#+3V3") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 148 46.81 0)
+    (uuid "d26034f3-be7f-4156-a5dd-647b4adc7520")
+    (property "Reference" "#GND" (at 148 48.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 148 49.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/8d33ea17-54e3-45c3-a6fd-66e3dff71d25" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:LED")
+    (at 175 95 0)
+    (uuid "32343545-2f33-4ead-8192-881a33c91463")
+        (property "Reference" "D2" (at 177 97 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "Green" (at 177 93 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/351f9268-4d91-41ac-b856-1995d7e13c3d" (reference "D2") (unit 1))
+      )
+    )
+  )
+  (symbol
+    (lib_id "usb_msx:R")
+    (at 175 85 0)
+    (uuid "73154e8e-0d2f-429d-a577-1fe795c54a1a")
+        (property "Reference" "R5" (at 177 87 0) (effects (font (size 1.27 1.27))))
+    (property "Value" "1k" (at 177 83 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/3dbab3a8-24a9-45ea-9863-9ab4479cda1a" (reference "R5") (unit 1))
+      )
+    )
+  )
+  (label "GPIO25" (at 175 81.19 90) (effects (font (size 1.27 1.27))) (uuid "dee4bf74-f0fe-4d4e-b48a-a36397f2aba6"))
+  (symbol
+    (lib_id "usb_msx:GND")
+    (at 175 98.81 0)
+    (uuid "5170b3ed-695d-4d21-b2fb-cba50c62572d")
+    (property "Reference" "#GND" (at 175 100.81 0) (effects (font (size 1.27 1.27)) hide))
+    (property "Value" "GND" (at 175 101.81 0) (effects (font (size 1.27 1.27))))
+    (instances
+      (project "usb-to-msx-mouse"
+        (path "/9a9a56c2-047b-429a-ba69-ac8f20e18f04" (reference "#GND") (unit 1))
+      )
+    )
+  )
+  (wire (pts (xy 175 91.19) (xy 175 88.81)) (stroke (width 0) (type default)) (uuid "642e903d-0a62-4d60-8b84-c2fb257340dc"))
+  (text "USB-C 5V pads: optional fallback power (OR-diode to +5V rail)" (at 20 180 0) (effects (font (size 2.0 2.0))) (uuid "4fa8f894-2f3c-460e-9ffa-74775e55b5e5"))
+  (no_connect (at 113.49 77.14) (uuid "b937cd0d-59b6-4028-ad87-e92d801ab30a"))
+  (no_connect (at 113.49 79.68) (uuid "07dc6f82-0c0b-4d89-9505-e7c2db797a7c"))
+  (no_connect (at 113.49 100) (uuid "8da62e0a-f0cf-499c-b44d-bcee8ed03622"))
+  (no_connect (at 113.49 102.54) (uuid "918ae58b-db9e-4001-8c7d-7b955ebbf48d"))
+  (no_connect (at 113.49 105.08) (uuid "a4e2b389-bed1-47f1-91a9-1af301a48281"))
+  (no_connect (at 113.49 107.62) (uuid "58eccad7-f65a-40ad-b7b8-31c3a1e2b048"))
+  (no_connect (at 113.49 110.16) (uuid "6f77bf63-4751-4bcd-93e5-6d32991b34c0"))
+  (no_connect (at 113.49 112.7) (uuid "8cb71038-76c0-42a6-adc3-9d9f12735161"))
+  (no_connect (at 113.49 115.24) (uuid "4a920bf1-c6db-4da6-a354-4a77b7401fe8"))
+  (no_connect (at 146.51 77.14) (uuid "504d9f1e-8443-499e-b28e-67f74792acce"))
+  (no_connect (at 146.51 79.68) (uuid "cf6d2be8-bd49-4592-956a-391945280f28"))
+  (no_connect (at 146.51 82.22) (uuid "f71087f8-e62e-4ff0-a137-31d11b14bef0"))
+  (no_connect (at 146.51 84.76) (uuid "49150ecd-0436-43ed-bfc8-89eae9d7adf1"))
+  (no_connect (at 146.51 87.3) (uuid "5cb95419-b51a-46d5-92d5-010acc48c65b"))
+  (no_connect (at 146.51 89.84) (uuid "87896c91-b037-404f-9d5f-3470bb076557"))
+  (no_connect (at 146.51 92.38) (uuid "d1cad9a9-0e6b-419e-bfbb-ad5ae534a1b7"))
+  (no_connect (at 146.51 94.92) (uuid "91c7259f-bd4f-401d-942c-71a9b5b38612"))
+  (no_connect (at 146.51 97.46) (uuid "761b606a-23ef-4e74-9969-c370dbe54c1a"))
+  (no_connect (at 146.51 102.54) (uuid "bdd50fa1-3766-458c-bf67-642bcfebe703"))
+  (no_connect (at 146.51 105.08) (uuid "259a6566-524a-40cf-bc0b-7306a564ac47"))
+  (no_connect (at 146.51 107.62) (uuid "78a65017-53e0-4b5b-ac66-447dd68282d9"))
+  (no_connect (at 146.51 110.16) (uuid "efa300b2-2f24-4124-bb82-a47dd2b9bbb7"))
+  (no_connect (at 146.51 112.7) (uuid "b46c7bae-bd22-4db6-b96c-139cdfe11dc8"))
+  (no_connect (at 146.51 115.24) (uuid "36024327-b995-4e91-9ae9-2a5d0155c791"))
+
+  (sheet_instances
+    (path "/"
+      (page "1")
+    )
+  )
+)

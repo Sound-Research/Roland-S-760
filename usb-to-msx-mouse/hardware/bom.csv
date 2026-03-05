@@ -1,0 +1,20 @@
+Qty,Component,Value,Package,JLCPCB Part,Notes
+1,RP2040,RP2040,QFN-56,C2040,Microcontroller
+1,W25Q16JVSNIQ,2MB,SOIC-8,C131024,QSPI flash
+1,Crystal,12MHz,3225,C9002,Load caps: 2x 27pF
+1,LDO regulator,XC6206P332MR 3.3V,SOT-23,C5446,5V to 3.3V
+1,74HCT245,Level shifter,SOIC-20,C6636,3.3V to 5V for 6 outputs
+10,Capacitor,100nF,0402,C307331,Decoupling
+2,Capacitor,1uF,0402,-,RP2040 core decoupling
+2,Capacitor,27pF,0402,-,Crystal load caps
+2,Resistor,27Ω,0402,-,USB D+/D- series resistors
+1,Resistor,2.2kΩ,0402,-,Strobe voltage divider (top)
+1,Resistor,3.3kΩ,0402,-,Strobe voltage divider (bottom)
+1,Resistor,1kΩ,0402,-,Status LED current limit
+1,Resistor,10kΩ,0402,-,Flash CS pull-up
+1,LED,Green,0603,-,Status indicator
+1,Polyfuse,500mA,0805,-,USB VBUS protection
+1,Schottky diode,-,SOD-323,-,MSX power reverse polarity protection
+1,Tactile switch,-,3x6mm,-,BOOTSEL button
+1,USB-A female,-,Through-hole,-,Hand-solder; USB mouse input
+1,DB-9 male,-,Through-hole,-,Hand-solder; MSX output to S-760
