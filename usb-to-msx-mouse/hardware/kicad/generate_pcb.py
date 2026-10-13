@@ -3,19 +3,17 @@
 generate_pcb.py — Generate KiCad 8 PCB layout for USB-to-MSX mouse adapter.
 
 Creates usb-to-msx-mouse.kicad_pcb with:
-    - Board outline: ~22 x 52mm (2-layer, 1.6mm thick)
+    - Board outline: 20 x 42mm (2-layer, 1.6mm thick)
+    - Compact mouSTer-like dongle form factor
+    - DB9 on one short end (no mounting holes — ears overhang board edges)
+    - USB-A on the opposite short end
     - All footprints placed with correct net assignments
-    - Ground zone on back copper
-    - Net definitions for all signals
+    - Ground zones on both copper layers
 
 Usage:
     python3 generate_pcb.py
 
-After generation, open in KiCad 8 to:
-    1. Fill zones (Edit → Fill All Zones or 'B')
-    2. Route traces (interactive router or export DSN for freerouting)
-    3. Run DRC
-    4. Generate Gerbers
+After generation, validate with kicad-cli, normalize with pcbnew, then upload to Quilter AI.
 """
 
 import uuid
@@ -75,45 +73,61 @@ def net_str(net_num):
 
 
 # ─── Board dimensions ───────────────────────────────────────────────────────
-OX, OY = 100, 100  # Board origin
-BW, BH = 22, 52    # Width (Y), Length (X)
+# Compact mouSTer-like dongle: DB9 on top, USB-A on bottom, components between.
+# Width 20mm: DB9 mounting ears overhang board edges (signal pins only ~11mm span).
+# Length 42mm: components stack vertically since less horizontal room.
+OX, OY = 100, 100  # Board origin (top-left corner)
+BW = 22             # Board width (X axis — signal pins fit, mounting ears overhang)
+BL = 42             # Board length (Y axis — dongle: DB9 → components → USB-A)
 
 
 def board_outline():
+    """Board outline as four gr_line segments (most compatible with third-party parsers)."""
     x1, y1 = OX, OY
-    x2, y2 = OX + BH, OY + BW
-    return f'''  (gr_rect (start {x1} {y1}) (end {x2} {y2})
-    (stroke (width 0.05) (type default))
-    (fill (type none))
-    (layer "Edge.Cuts")
-    (uuid "{uid()}")
-  )'''
+    x2, y2 = OX + BW, OY + BL
+    lines = []
+    for start, end in [
+        ((x1, y1), (x2, y1)),  # top
+        ((x2, y1), (x2, y2)),  # right
+        ((x2, y2), (x1, y2)),  # bottom
+        ((x1, y2), (x1, y1)),  # left
+    ]:
+        lines.append(f'  (gr_line (start {start[0]} {start[1]}) (end {end[0]} {end[1]}) '
+                     f'(stroke (width 0.05) (type default)) (layer "Edge.Cuts") (uuid "{uid()}"))')
+    return '\n'.join(lines)
 
 
 # ─── Footprint generators with net assignments ─────────────────────────────
+
+def fmt(v):
+    """Format a float with 6 decimal max, stripping trailing zeros."""
+    return f"{v:.6f}".rstrip('0').rstrip('.')
+
 
 def pad_smd(num, x, y, w, h, net, angle=0, shape="roundrect", layer="F.Cu"):
     """Generate a single SMD pad with net assignment."""
     layers = f'"{layer}" "{layer[0]}.Paste" "{layer[0]}.Mask"'
     rr = ' (roundrect_rratio 0.25)' if shape == "roundrect" else ""
-    return f'    (pad "{num}" smd {shape} (at {x} {y} {angle}) (size {w} {h}) (layers {layers}){rr} {net_str(net)} (uuid "{uid()}"))'
+    return f'    (pad "{num}" smd {shape} (at {fmt(x)} {fmt(y)} {angle}) (size {fmt(w)} {fmt(h)}) (layers {layers}){rr} {net_str(net)} (uuid "{uid()}"))'
 
 
 def pad_th(num, x, y, pad_d, drill_d, net, angle=0, shape="circle", oval_w=None, oval_h=None):
     """Generate a single through-hole pad with net assignment."""
     if shape == "oval" and oval_w and oval_h:
-        size = f"{oval_w} {oval_h}"
+        size = f"{fmt(oval_w)} {fmt(oval_h)}"
     else:
-        size = f"{pad_d} {pad_d}"
-    return f'    (pad "{num}" thru_hole {shape} (at {x} {y} {angle}) (size {size}) (drill {drill_d}) (layers "*.Cu" "*.Mask") {net_str(net)} (uuid "{uid()}"))'
+        size = f"{fmt(pad_d)} {fmt(pad_d)}"
+    return f'    (pad "{num}" thru_hole {shape} (at {fmt(x)} {fmt(y)} {angle}) (size {size}) (drill {fmt(drill_d)}) (layers "*.Cu" "*.Mask") {net_str(net)} (uuid "{uid()}"))'
 
 
-def fp_header(fp_lib, ref, value, x, y, angle=0):
-    """Footprint header boilerplate."""
+def fp_header(fp_lib, ref, value, x, y, angle=0, attr="smd"):
+    """Footprint header boilerplate. attr should be 'smd' or 'through_hole'."""
     return f'''  (footprint "{fp_lib}"
     (layer "F.Cu")
     (uuid "{uid()}")
     (at {x} {y} {angle})
+    (path "/")
+    (attr {attr})
     (property "Reference" "{ref}" (at 0 -2 {angle}) (layer "F.SilkS") (uuid "{uid()}") (effects (font (size 0.8 0.8) (thickness 0.12))))
     (property "Value" "{value}" (at 0 2 {angle}) (layer "F.Fab") (uuid "{uid()}") (effects (font (size 0.8 0.8) (thickness 0.12))))
     (property "Footprint" "{fp_lib}" (at 0 0 {angle}) (layer "F.Fab") (uuid "{uid()}") (effects (font (size 1.27 1.27) (thickness 0.15)) hide))'''
@@ -195,7 +209,8 @@ def fp_qfn56(ref, value, x, y, pin_nets, angle=0):
     lines.append(f'    (fp_line (start -3.5 3.5) (end -3.5 -3.5) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
     lines.append(f'    (fp_line (start 3.5 -3.5) (end 3.5 3.5) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
     lines.append(f'    (fp_line (start 3.5 3.5) (end -3.5 3.5) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
-    lines.append(f'    (fp_circle (center -3.1 3.9) (end -3.0 3.9) (stroke (width 0.12) (type solid)) (fill (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
+    # Pin 1 marker dot — fp_circle does not support (fill) in KiCad 9
+    lines.append(f'    (fp_circle (center -3.1 3.9) (end -3.0 3.9) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
 
     # Bottom side: pins 1-14 (left to right)
     for i in range(14):
@@ -262,26 +277,30 @@ def fp_soic8(ref, value, x, y, pin_nets, angle=0):
     return '\n'.join(lines)
 
 
-def fp_soic20w(ref, value, x, y, pin_nets, angle=0):
-    """SOIC-20W 74HCT245. Pins 1-10 bottom, 11-20 top."""
-    lines = [fp_header("Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm", ref, value, x, y, angle)]
-    lines.append(f'    (fp_line (start -6.5 -4.5) (end 6.5 -4.5) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
-    lines.append(f'    (fp_line (start -6.5 4.5) (end -6.5 -4.5) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
-    lines.append(f'    (fp_line (start 6.5 -4.5) (end 6.5 4.5) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
-    lines.append(f'    (fp_line (start 6.5 4.5) (end -6.5 4.5) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
+def fp_tssop20(ref, value, x, y, pin_nets, angle=0):
+    """TSSOP-20 74HCT245 (compact package). Pins 1-10 bottom, 11-20 top.
+    Body: 6.5x4.4mm, pin pitch 0.65mm, pad-to-pad span ~6.4mm."""
+    lines = [fp_header("Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm", ref, value, x, y, angle)]
+    # Silkscreen outline
+    lines.append(f'    (fp_line (start -3.4 -2.3) (end 3.4 -2.3) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
+    lines.append(f'    (fp_line (start -3.4 2.3) (end -3.4 -2.3) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
+    lines.append(f'    (fp_line (start 3.4 -2.3) (end 3.4 2.3) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
+    lines.append(f'    (fp_line (start 3.4 2.3) (end -3.4 2.3) (stroke (width 0.12) (type solid)) (layer "F.SilkS") (uuid "{uid()}"))')
 
-    # Pins 1-10 on one side
+    # TSSOP-20: 20 pins, pitch 0.65mm, 10 per side
+    # Pin 1 at x = -2.925mm, each subsequent pin +0.65mm
+    # Pads at y = ±3.2mm (center of pad, pad height ~1.6mm)
     for i in range(10):
         pnum = i + 1
-        px = -5.715 + i * 1.27
+        px = -2.925 + i * 0.65
         net = pin_nets.get(pnum, 0)
-        lines.append(pad_smd(str(pnum), px, 3.75, 0.6, 1.78, net, angle))
+        lines.append(pad_smd(str(pnum), px, 3.2, 0.4, 1.6, net, angle))
     # Pins 11-20 on other side (reversed)
     for i in range(10):
         pnum = 20 - i
-        px = -5.715 + i * 1.27
+        px = -2.925 + i * 0.65
         net = pin_nets.get(pnum, 0)
-        lines.append(pad_smd(str(pnum), px, -3.75, 0.6, 1.78, net, angle))
+        lines.append(pad_smd(str(pnum), px, -3.2, 0.4, 1.6, net, angle))
 
     lines.append("  )")
     return '\n'.join(lines)
@@ -289,7 +308,7 @@ def fp_soic20w(ref, value, x, y, pin_nets, angle=0):
 
 def fp_usb_a(ref, value, x, y, pin_nets, angle=0):
     """USB-A female TH connector. Pins: 1=VBUS, 2=D-, 3=D+, 4=GND, 5=Shield."""
-    lines = [fp_header("Connector_USB:USB_A_Molex_67643_Horizontal", ref, value, x, y, angle)]
+    lines = [fp_header("Connector_USB:USB_A_Molex_67643_Horizontal", ref, value, x, y, angle, attr="through_hole")]
     lines.append(pad_th("1", 0, 3.5, 1.5, 0.9, pin_nets.get(1, 0), angle))
     lines.append(pad_th("2", 0, 1.0, 1.5, 0.9, pin_nets.get(2, 0), angle))
     lines.append(pad_th("3", 0, -1.0, 1.5, 0.9, pin_nets.get(3, 0), angle))
@@ -302,27 +321,26 @@ def fp_usb_a(ref, value, x, y, pin_nets, angle=0):
 
 
 def fp_db9_male(ref, value, x, y, pin_nets, angle=0):
-    """DB-9 male TH connector. Pins 1-9 + pin 10 for mounting holes."""
-    lines = [fp_header("Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm",
-                        ref, value, x, y, angle)]
-    lines.append(f'    (fp_rect (start -14 -3.5) (end 14 3.5) (stroke (width 0.12) (type solid)) (fill (type none)) (layer "F.Fab") (uuid "{uid()}"))')
+    """DB-9 male TH connector — signal pins only, no mounting holes.
+    Mounting ears overhang the board edges; case provides mechanical retention."""
+    lines = [fp_header("Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm",
+                        ref, value, x, y, angle, attr="through_hole")]
+    # Silkscreen outline for signal pin area only (no mounting ears)
+    lines.append(f'    (fp_rect (start -7 -3.5) (end 7 3.5) (stroke (width 0.12) (type solid)) (layer "F.Fab") (uuid "{uid()}"))')
 
-    # Row 1: pins 1-5
+    # Row 1: pins 1-5 (front row, closer to connector face)
     for i in range(5):
         pnum = i + 1
         px = -5.54 + i * 2.77
         net = pin_nets.get(pnum, 0)
         lines.append(pad_th(str(pnum), px, -1.42, 1.6, 1.0, net, angle))
-    # Row 2: pins 6-9
+    # Row 2: pins 6-9 (back row)
     for i in range(4):
         pnum = i + 6
         px = -4.155 + i * 2.77
         net = pin_nets.get(pnum, 0)
         lines.append(pad_th(str(pnum), px, 1.42, 1.6, 1.0, net, angle))
-    # Mounting holes (connected to GND)
-    mnt_net = pin_nets.get(10, 1)
-    lines.append(pad_th("10", -12.5, 0, 3.2, 2.8, mnt_net, angle))
-    lines.append(pad_th("10", 12.5, 0, 3.2, 2.8, mnt_net, angle))
+    # No mounting holes — ears overhang the board edges
 
     lines.append("  )")
     return '\n'.join(lines)
@@ -342,9 +360,9 @@ def ground_zone():
     (fill yes (thermal_gap 0.5) (thermal_bridge_width 0.5))
     (polygon (pts
       (xy {OX - 0.5} {OY - 0.5})
-      (xy {OX + BH + 0.5} {OY - 0.5})
-      (xy {OX + BH + 0.5} {OY + BW + 0.5})
-      (xy {OX - 0.5} {OY + BW + 0.5})
+      (xy {OX + BW + 0.5} {OY - 0.5})
+      (xy {OX + BW + 0.5} {OY + BL + 0.5})
+      (xy {OX - 0.5} {OY + BL + 0.5})
     ))
   )'''
 
@@ -364,9 +382,9 @@ def front_ground_zone():
     (fill yes (thermal_gap 0.5) (thermal_bridge_width 0.5))
     (polygon (pts
       (xy {OX - 0.5} {OY - 0.5})
-      (xy {OX + BH + 0.5} {OY - 0.5})
-      (xy {OX + BH + 0.5} {OY + BW + 0.5})
-      (xy {OX - 0.5} {OY + BW + 0.5})
+      (xy {OX + BW + 0.5} {OY - 0.5})
+      (xy {OX + BW + 0.5} {OY + BL + 0.5})
+      (xy {OX - 0.5} {OY + BL + 0.5})
     ))
   )'''
 
@@ -380,18 +398,94 @@ def generate_pcb():
     footprints = []
 
     # Board center references
-    cx = OX + BH / 2
-    cy = OY + BW / 2
+    cx = OX + BW / 2      # Center X (width axis) = OX + 10
+    cy = OY + BL / 2      # Center Y (length axis) = OY + 21
 
-    # ─── RP2040 (U1) — center-left of board ────────────────────────────
-    rp_x = OX + 18
-    rp_y = cy
+    # ─── DONGLE LAYOUT (top-to-bottom, Y increasing) ───────────────────────
+    #
+    # 20mm wide mouSTer-like dongle. DB9 mounting ears overhang the board.
+    # DB9 connector face extends past top edge (mating axis = Y axis).
+    # USB-A connector face extends past bottom edge (mating axis = Y axis).
+    # Components stack vertically since board is narrow.
+    #
+    # Zone map (Y offsets from OY):
+    #   0..5   DB9 signal pin zone (connector body overhangs Y < OY)
+    #   5..15  74HCT245 + DB9-side passives
+    #  15..17  cap row (above RP2040)
+    #  17..25  RP2040 + crystal (right side)
+    #  25..27  cap row (below RP2040)
+    #  27..33  flash + switch + LDO
+    #  33..36  USB passives
+    #  36..42  USB-A pin zone (connector body overhangs Y > OY+BL)
+
+    # ─── DB-9 Male (J2) — top edge, signal pins only ──────────────────────
+    # Rotation 0°: connector face extends in -Y (past top edge).
+    # Signal pins span ±5.54mm in X. Mounting ears at ±12.5mm overhang the board.
+    # Center at Y=OY+3 → front pin pad edge at OY+0.78 (inside board).
+    db9_x = cx
+    db9_y = OY + 3
+    db9_nets = {
+        1: 29,   # Data 0
+        2: 30,   # Data 1
+        3: 31,   # Data 2
+        4: 32,   # Data 3
+        5: 35,   # +5V from MSX (before diode)
+        6: 33,   # Left button
+        7: 34,   # Right button
+        8: 27,   # Strobe (5V, before divider)
+        9: 1,    # GND
+    }
+    footprints.append(fp_db9_male("J2", "DB9_Male", db9_x, db9_y, db9_nets, 0))
+
+    # ─── 74HCT245 (U3) — TSSOP-20, near DB9 (drives DB9 signals) ───────
+    # Body 6.5x4.4mm, pads extend to ±4.0mm in Y from center.
+    # Centered on board (20mm wide, body 4.4mm — fits easily).
+    ls_x = cx
+    ls_y = OY + 11
+    ls_nets = {
+        1: 1,    # DIR → GND (A→B)
+        2: 6,    # A1 ← GPIO2
+        3: 7,    # A2 ← GPIO3
+        4: 8,    # A3 ← GPIO4
+        5: 9,    # A4 ← GPIO5
+        6: 10,   # A5 ← GPIO6
+        7: 11,   # A6 ← GPIO7
+        8: 1,    # A7 → GND (unused)
+        9: 1,    # A8 → GND (unused)
+        10: 1,   # GND
+        11: 0,   # B8 — unused (no connect)
+        12: 0,   # B7 — unused (no connect)
+        13: 34,  # B6 → right btn
+        14: 33,  # B5 → left btn
+        15: 32,  # B4 → data 3
+        16: 31,  # B3 → data 2
+        17: 30,  # B2 → data 1
+        18: 29,  # B1 → data 0
+        19: 1,   # ~OE → GND (always enabled)
+        20: 2,   # VCC → +5V
+    }
+    footprints.append(fp_tssop20("U3", "74HCT245", ls_x, ls_y, ls_nets, 0))
+
+    # ─── DB9-side passives — beside U3 ─────────────────────────────────
+    # R3: 2.2kΩ strobe divider top (STROBE_5V → STROBE_DIV)
+    footprints.append(fp_0402("R3", "2.2k", cx - 5, OY + 8, {1: 27, 2: 12}))
+    # R4: 3.3kΩ strobe divider bottom (STROBE_DIV → GND)
+    footprints.append(fp_0402("R4", "3.3k", cx - 5, OY + 10, {1: 12, 2: 1}))
+    # D1: Schottky diode (MSX power protection)
+    footprints.append(fp_sod323("D1", "BAT54", cx + 5, OY + 8, {1: 2, 2: 35}))
+
+    # ─── RP2040 (U1) — center of board ──────────────────────────────────
+    # QFN-56 body 7x7mm, pads extend to ±3.75mm from center.
+    # At Y=OY+21: top pads at OY+17.25, bottom pads at OY+24.75.
+    # U3 bottom pads at OY+15. Gap = 17.25-15 = 2.25mm (roomy).
+    rp_x = cx
+    rp_y = OY + 21
 
     # RP2040 pin-to-net mapping (QFN-56 numbering)
     rp_nets = {
         # IOVDD pins → +3V3
         1: 3, 10: 3, 17: 3, 23: 3, 34: 3, 43: 3, 50: 3,
-        # GPIO pins used by our design
+        # GPIO pins used
         2: 0, 3: 0,           # GPIO0, GPIO1 — unused
         4: 6,                  # GPIO2 → data 0
         5: 7,                  # GPIO3 → data 1
@@ -432,8 +526,18 @@ def generate_pcb():
     }
     footprints.append(fp_qfn56("U1", "RP2040", rp_x, rp_y, rp_nets))
 
-    # ─── W25Q16 Flash (U2) — below RP2040 ──────────────────────────────
-    # SOIC-8 pinout: 1=~CS, 2=DO/IO1, 3=~WP/IO2, 4=GND, 5=DI/IO0, 6=CLK, 7=~HOLD/IO3, 8=VCC
+    # ─── 12MHz Crystal (Y1) — right of RP2040, near XIN/XOUT ────────────
+    # XIN = pin 21 at (rp_x+3.375, rp_y+0.2), XOUT = pin 22 at (rp_x+3.375, rp_y-0.2).
+    # Crystal 3225: pads span ±1.7mm in X, ±1.35mm in Y from center.
+    # At (cx+7, rp_y): inner pads at cx+5.3, RP2040 right pads at cx+3.75. Gap=1.55mm ✓
+    # Outer pads at cx+8.7, board right edge cx+10. Margin=1.3mm ✓
+    cr_nets = {1: 20, 2: 1, 3: 21, 4: 1}
+    footprints.append(fp_crystal_3225("Y1", "12MHz", cx + 7, rp_y, cr_nets))
+
+    # ─── W25Q16 Flash (U2) — below RP2040, slightly right ───────────────
+    # SOIC-8 at 0° (unrotated). Body 3.9x4.9mm, pads at ±2.475mm in Y.
+    # Can't fit beside RP2040 on 20mm board — goes below cap row instead.
+    # At (cx+3, OY+30): pads Y=27.525 to 32.475. Bottom cap row at OY+26. Gap ~1.5mm ✓
     fl_nets = {
         1: 19,  # ~CS → QSPI_SS
         2: 16,  # DO/IO1 → QSPI_SD1
@@ -444,134 +548,101 @@ def generate_pcb():
         7: 18,  # ~HOLD/IO3 → QSPI_SD3
         8: 3,   # VCC → +3V3
     }
-    footprints.append(fp_soic8("U2", "W25Q16", rp_x, rp_y + 8, fl_nets, 90))
+    footprints.append(fp_soic8("U2", "W25Q16", cx + 3, OY + 30, fl_nets, 0))
 
-    # ─── 74HCT245 (U3) — between RP2040 and DB-9 ──────────────────────
-    ls_x = OX + 35
-    # SOIC-20 pinout: 1=DIR, 2=A1..9=A8, 10=GND, 11=B8..18=B1, 19=~OE, 20=VCC
-    ls_nets = {
-        1: 1,    # DIR → GND (A→B)
-        2: 6,    # A1 ← GPIO2
-        3: 7,    # A2 ← GPIO3
-        4: 8,    # A3 ← GPIO4
-        5: 9,    # A4 ← GPIO5
-        6: 10,   # A5 ← GPIO6
-        7: 11,   # A6 ← GPIO7
-        8: 1,    # A7 → GND (unused)
-        9: 1,    # A8 → GND (unused)
-        10: 1,   # GND
-        11: 0,   # B8 — unused (no connect)
-        12: 0,   # B7 — unused (no connect)
-        13: 34,  # B6 → DB-9 pin 7 (right btn)
-        14: 33,  # B5 → DB-9 pin 6 (left btn)
-        15: 32,  # B4 → DB-9 pin 4 (data 3)
-        16: 31,  # B3 → DB-9 pin 3 (data 2)
-        17: 30,  # B2 → DB-9 pin 2 (data 1)
-        18: 29,  # B1 → DB-9 pin 1 (data 0)
-        19: 1,   # ~OE → GND (always enabled)
-        20: 2,   # VCC → +5V
-    }
-    footprints.append(fp_soic20w("U3", "74HCT245", ls_x, cy, ls_nets, 90))
+    # ─── BOOTSEL Switch (SW1) — left side, same Y level as flash ────────
+    # TL3342 pads at ±3.1mm in X. At cx-5, pads from cx-8.1 to cx-1.9.
+    # Board left edge at cx-10. Margin=1.9mm. Flash inner pad at cx+0.8. Gap ≥2.7mm ✓
+    footprints.append(fp_tact_switch("SW1", "BOOTSEL", cx - 5, OY + 30, {1: 19, 2: 1}, 0))
 
-    # ─── XC6206 LDO (U4) — near top, power section ─────────────────────
-    # SOT-23: pin 1=GND, pin 2=VOUT, pin 3=VIN
-    ldo_nets = {1: 1, 2: 3, 3: 2}  # GND, +3V3, +5V
-    footprints.append(fp_sot23_ldo("U4", "XC6206", rp_x - 5, rp_y - 8, ldo_nets))
+    # ─── XC6206 LDO (U4) — left side, below switch ─────────────────────
+    # SOT-23: pin 1(GND) at (-0.95,+1.1), pin 2(VOUT) at (+0.95,+1.1), pin 3(VIN) at (0,-1.1).
+    # At (cx-6, OY+33): all pads well within board. Left edge at cx-6.95-0.4=cx-7.35, margin 2.65mm.
+    ldo_nets = {1: 1, 2: 3, 3: 2}
+    footprints.append(fp_sot23_ldo("U4", "XC6206", cx - 6, OY + 33, ldo_nets))
 
-    # ─── 12MHz Crystal (Y1) ────────────────────────────────────────────
-    # 3225: pin 1=XIN, pin 2=GND, pin 3=XOUT, pin 4=GND
-    cr_nets = {1: 20, 2: 1, 3: 21, 4: 1}
-    footprints.append(fp_crystal_3225("Y1", "12MHz", rp_x + 6, rp_y - 6, cr_nets))
-
-    # ─── BOOTSEL Switch (SW1) ──────────────────────────────────────────
-    # Pin 1 → QSPI_SS, Pin 2 → GND
-    footprints.append(fp_tact_switch("SW1", "BOOTSEL", rp_x - 6, rp_y + 8, {1: 19, 2: 1}, 90))
-
-    # ─── USB-A Female (J1) — left edge ─────────────────────────────────
-    # Pin 1=VBUS, 2=D-, 3=D+, 4=GND, 5=Shield
+    # ─── USB-A Female (J1) — bottom edge ─────────────────────────────────
+    # Rotation 270° (CW): mating face extends past bottom edge.
+    # Data pins at (cx±3.5, usb_y). Shield tabs at (cx±6, usb_y-4).
+    # At usb_y=OY+40: shield tabs at OY+36. USB passives at OY+34.
+    usb_x = cx
+    usb_y = OY + BL - 2      # = OY + 40
     usb_nets = {1: 26, 2: 24, 3: 25, 4: 1, 5: 1}
-    footprints.append(fp_usb_a("J1", "USB_A", OX + 2, cy, usb_nets, 90))
+    footprints.append(fp_usb_a("J1", "USB_A", usb_x, usb_y, usb_nets, 270))
 
-    # ─── DB-9 Male (J2) — right edge ──────────────────────────────────
-    # MSX pinout: 1=D0, 2=D1, 3=D2, 4=D3, 5=+5V, 6=LBtn, 7=RBtn, 8=Strobe, 9=GND
-    db9_nets = {
-        1: 29,   # Data 0
-        2: 30,   # Data 1
-        3: 31,   # Data 2
-        4: 32,   # Data 3
-        5: 35,   # +5V from MSX (before diode)
-        6: 33,   # Left button
-        7: 34,   # Right button
-        8: 27,   # Strobe (5V, before divider)
-        9: 1,    # GND
-        10: 1,   # Mounting → GND
-    }
-    footprints.append(fp_db9_male("J2", "DB9_Male", OX + BH - 2, cy, db9_nets, 90))
+    # ─── Status LED (D2) + resistor — left side, between cap row and flash ─
+    # D2 at cx-8 (left pad at cx-9.15, board edge cx-10, margin 0.85mm).
+    # R5 at cx-5 (left pad at cx-5.76). Gap to D2 right pad (cx-6.85) = 1.09mm ✓
+    footprints.append(fp_0603_led("D2", "Green", cx - 8, OY + 27, {1: 36, 2: 1}))
+    footprints.append(fp_0402("R5", "1k", cx - 5, OY + 27, {1: 13, 2: 36}))
 
-    # ─── Status LED (D2) ───────────────────────────────────────────────
-    # Pin 1=anode, 2=cathode(GND)
-    footprints.append(fp_0603_led("D2", "Green", rp_x + 6, rp_y - 9, {1: 36, 2: 1}))
+    # ─── Polyfuse F1 (USB VBUS protection) ───────────────────────────────
+    # Place in gap between flash/LDO zone and USB shield tabs.
+    usb_zone_y = OY + 34
+    # F1 at cx-3: pad 1 at cx-3.95. LDO pin 2 at cx-5.05, right edge cx-4.65. Gap=0.7mm ✓
+    footprints.append(fp_0805_fuse("F1", "500mA", cx - 3, usb_zone_y, {1: 2, 2: 26}))
 
-    # ─── Schottky Diode D1 (MSX power protection) ─────────────────────
-    # Cathode (pin 1) → +5V rail, Anode (pin 2) → 5V_MSX
-    footprints.append(fp_sod323("D1", "BAT54", OX + BH - 10, rp_y - 8, {1: 2, 2: 35}))
+    # ─── Resistors ───────────────────────────────────────────────────────
+    # R1, R2: USB series resistors — in gap between flash zone and USB
+    # R1 at cx+1: left pad at cx+0.24. F1 pad 2 right at cx-1.55. Gap=1.79mm ✓
+    footprints.append(fp_0402("R1", "27R", cx + 1, usb_zone_y, {1: 24, 2: 5}))
+    footprints.append(fp_0402("R2", "27R", cx + 4, usb_zone_y, {1: 25, 2: 4}))
+    # R6: flash CS pull-up — right of flash, above
+    # Flash top pads end at cx+5.2. R6 at cx+7: left pad at cx+6.24. Gap=1.04mm ✓
+    footprints.append(fp_0402("R6", "10k", cx + 7, OY + 27, {1: 19, 2: 3}))
+    # R7: RUN pull-up — left side, above RP2040 cap row
+    footprints.append(fp_0402("R7", "10k", cx - 7, OY + 16, {1: 23, 2: 3}))
 
-    # ─── Polyfuse F1 (USB VBUS protection) ─────────────────────────────
-    # Pin 1 → +5V rail, Pin 2 → VBUS_FUSED (to USB-A VBUS)
-    footprints.append(fp_0805_fuse("F1", "500mA", OX + 8, rp_y - 6, {1: 2, 2: 26}))
+    # ─── Decoupling Capacitors ───────────────────────────────────────────
+    # RP2040 pads extend to ±3.75mm from center (3.375 + 0.375 half-pad).
+    # 20mm board: use rows above and below RP2040.
+    #
+    # Top row at rp_y-5 (=OY+16): RP2040 top pad edge at OY+17.25.
+    #   Cap top edge at OY+16+0.25=OY+16.25. Gap to RP2040=1.0mm ✓
+    #   U3 bottom pads at OY+15. Cap bottom edge at OY+16-0.25=OY+15.75. Gap=0.75mm ✓
+    # Bottom row at rp_y+5 (=OY+26): RP2040 bottom pad edge at OY+24.75.
+    #   Cap top edge at OY+26-0.25=OY+25.75. Gap=1.0mm ✓
+    cap_top_y = rp_y - 5     # OY + 16
+    cap_bot_y = rp_y + 5     # OY + 26
 
-    # ─── Resistors ─────────────────────────────────────────────────────
-    # R1: 27Ω USB D- series (USB_DM_R → USB_DM)
-    footprints.append(fp_0402("R1", "27R", OX + 10, rp_y - 2, {1: 24, 2: 5}))
-    # R2: 27Ω USB D+ series (USB_DP_R → USB_DP)
-    footprints.append(fp_0402("R2", "27R", OX + 10, rp_y + 2, {1: 25, 2: 4}))
-    # R3: 2.2kΩ strobe divider top (STROBE_5V → STROBE_DIV midpoint)
-    footprints.append(fp_0402("R3", "2.2k", OX + BH - 8, rp_y + 4, {1: 27, 2: 12}))
-    # R4: 3.3kΩ strobe divider bottom (STROBE_DIV → GND)
-    footprints.append(fp_0402("R4", "3.3k", OX + BH - 8, rp_y + 7, {1: 12, 2: 1}))
-    # R5: 1kΩ LED resistor (GPIO25 → LED_A)
-    footprints.append(fp_0402("R5", "1k", rp_x + 6, rp_y - 7.5, {1: 13, 2: 36}))
-    # R6: 10kΩ flash CS pull-up (QSPI_SS → +3V3)
-    footprints.append(fp_0402("R6", "10k", rp_x - 4, rp_y + 6, {1: 19, 2: 3}))
-    # R7: 10kΩ RUN pull-up (RUN → +3V3)
-    footprints.append(fp_0402("R7", "10k", rp_x + 4, rp_y - 4, {1: 23, 2: 3}))
-
-    # ─── Decoupling Capacitors ─────────────────────────────────────────
-    # C1-C10: 100nF for RP2040 IOVDD/power pins (+3V3 → GND)
+    # 5 caps per row, 2mm spacing, centered on RP2040.
+    # X range: cx-4 to cx+4 = 6mm to 14mm from OX left. Board margins ≥6mm. ✓
     cap_positions = [
-        (rp_x - 5, rp_y - 5),
-        (rp_x - 3, rp_y - 5),
-        (rp_x - 1, rp_y - 5),
-        (rp_x + 1, rp_y - 5),
-        (rp_x + 3, rp_y - 5),
-        (rp_x - 5, rp_y + 5),
-        (rp_x - 3, rp_y + 5),
-        (rp_x - 1, rp_y + 5),
-        (rp_x + 1, rp_y + 5),
-        (rp_x + 3, rp_y + 5),
+        # Top row: 5 caps (C1-C5)
+        (cx - 4, cap_top_y),
+        (cx - 2, cap_top_y),
+        (cx,     cap_top_y),
+        (cx + 2, cap_top_y),
+        (cx + 4, cap_top_y),
+        # Bottom row: 5 caps (C6-C10)
+        (cx - 4, cap_bot_y),
+        (cx - 2, cap_bot_y),
+        (cx,     cap_bot_y),
+        (cx + 2, cap_bot_y),
+        (cx + 4, cap_bot_y),
     ]
     for i, (cx_pos, cy_pos) in enumerate(cap_positions):
         footprints.append(fp_0402(f"C{i+1}", "100nF", cx_pos, cy_pos, {1: 3, 2: 1}))
 
-    # C11: 27pF crystal load cap XIN (XIN → GND)
-    footprints.append(fp_0402("C11", "27pF", rp_x + 4, rp_y - 6, {1: 20, 2: 1}))
-    # C12: 27pF crystal load cap XOUT (XOUT → GND)
-    footprints.append(fp_0402("C12", "27pF", rp_x + 8, rp_y - 6, {1: 21, 2: 1}))
-    # C13: 1µF DVDD decoupling (DVDD → GND)
-    footprints.append(fp_0402("C13", "1uF", rp_x - 6, rp_y - 2, {1: 22, 2: 1}))
-    # C14: 1µF USB_VDD decoupling (+3V3 → GND)
-    footprints.append(fp_0402("C14", "1uF", rp_x + 5, rp_y + 5, {1: 3, 2: 1}))
-    # C15: 1µF LDO input (+5V → GND)
-    footprints.append(fp_0402("C15", "1uF", rp_x - 7, rp_y - 8, {1: 2, 2: 1}))
-    # C16: 1µF LDO output (+3V3 → GND)
-    footprints.append(fp_0402("C16", "1uF", rp_x - 3, rp_y - 8, {1: 3, 2: 1}))
+    # C11: 27pF crystal load cap XIN — near crystal (above)
+    footprints.append(fp_0402("C11", "27pF", cx + 7, rp_y - 2.5, {1: 20, 2: 1}))
+    # C12: 27pF crystal load cap XOUT — near crystal (below)
+    footprints.append(fp_0402("C12", "27pF", cx + 7, rp_y + 2.5, {1: 21, 2: 1}))
+    # C13: 1µF DVDD decoupling — bottom cap row, left extension
+    footprints.append(fp_0402("C13", "1uF", cx - 6, cap_bot_y, {1: 22, 2: 1}))
+    # C14: 1µF USB_VDD decoupling — bottom cap row, right extension
+    footprints.append(fp_0402("C14", "1uF", cx + 6, cap_bot_y, {1: 3, 2: 1}))
+    # C15: 1µF LDO input (+5V → GND) — near LDO VIN (left side)
+    footprints.append(fp_0402("C15", "1uF", cx - 8, OY + 32, {1: 2, 2: 1}))
+    # C16: 1µF LDO output (+3V3 → GND) — below LDO (clear of USB shield tabs)
+    footprints.append(fp_0402("C16", "1uF", cx - 8.5, OY + 35, {1: 3, 2: 1}))
 
-    # ─── Silkscreen text ───────────────────────────────────────────────
+    # ─── Silkscreen text ─────────────────────────────────────────────────
     texts = []
-    texts.append(silkscreen_text("USB-MSX Mouse", cx, OY + 2, 1.0))
-    texts.append(silkscreen_text("SoundResearch", cx, OY + BW - 1.5, 0.8))
+    texts.append(silkscreen_text("USB-MSX", cx, OY + 28, 0.8))
+    texts.append(silkscreen_text("SR", cx - 7, OY + 28, 0.6))
 
-    # ─── Net declarations ──────────────────────────────────────────────
+    # ─── Net declarations ────────────────────────────────────────────────
     net_decls = []
     for num, name in sorted(NETS.items()):
         if num == 0:
@@ -579,11 +650,11 @@ def generate_pcb():
         else:
             net_decls.append(f'  (net {num} "{name}")')
 
-    # ─── Assemble PCB ──────────────────────────────────────────────────
+    # ─── Assemble PCB ────────────────────────────────────────────────────
     output = f'''(kicad_pcb
   (version 20231014)
   (generator "usb_msx_pcb_gen")
-  (generator_version "2.0")
+  (generator_version "3.0")
   (general
     (thickness 1.6)
     (legacy_teardrops no)
@@ -678,6 +749,7 @@ if __name__ == "__main__":
         f.write(pcb)
 
     print(f"Generated: {output_path}")
+    print(f"Board size: {BW} x {BL} mm ({BW * BL} mm²)")
     print(f"File size: {len(pcb)} bytes")
     print(f"Nets defined: {len(NETS)}")
     print()

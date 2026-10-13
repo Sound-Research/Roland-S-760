@@ -111,10 +111,10 @@ def sym_rp2040():
     lines.append('      (property "Footprint" "Package_DFN_QFN:QFN-56-1EP_7x7mm_P0.4mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))')
     lines.append('      (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))')
     lines.append('      (property "JLCPCB" "C2040" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))')
-    lines.append('      (symbol "usb_msx:RP2040_0_1"')
+    lines.append('      (symbol "RP2040_0_1"')
     lines.append('        (rectangle (start -15.24 27.94) (end 15.24 -25.4) (stroke (width 0.254) (type default)) (fill (type background)))')
     lines.append('      )')
-    lines.append('      (symbol "usb_msx:RP2040_1_1"')
+    lines.append('      (symbol "RP2040_1_1"')
 
     all_pins = left_pins + right_pins + top_pins + bottom_pins
     for pnum, pname, px, py, pdir in all_pins:
@@ -141,10 +141,10 @@ def sym_w25q16():
       (property "Footprint" "Package_SO:SOIC-8_3.9x4.9mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "JLCPCB" "C131024" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:W25Q16JVSNIQ_0_1"
+      (symbol "W25Q16JVSNIQ_0_1"
         (rectangle (start -7.62 6.35) (end 7.62 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))
       )
-      (symbol "usb_msx:W25Q16JVSNIQ_1_1"
+      (symbol "W25Q16JVSNIQ_1_1"
         (pin input line (at -10.16 3.81 0) (length 2.54) (name "~{CS}" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin output line (at 10.16 3.81 180) (length 2.54) (name "DO/IO1" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
         (pin input line (at 10.16 1.27 180) (length 2.54) (name "~{WP}/IO2" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
@@ -166,13 +166,13 @@ def sym_74hct245():
       (on_board yes)
       (property "Reference" "U" (at 0 16.51 0) (effects (font (size 1.27 1.27))))
       (property "Value" "74HCT245" (at 0 -16.51 0) (effects (font (size 1.27 1.27))))
-      (property "Footprint" "Package_SO:SOIC-20W_7.5x12.8mm_P1.27mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
+      (property "Footprint" "Package_SO:TSSOP-20_4.4x6.5mm_P0.65mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "JLCPCB" "C6636" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:74HCT245_0_1"
+      (symbol "74HCT245_0_1"
         (rectangle (start -10.16 15.24) (end 10.16 -15.24) (stroke (width 0.254) (type default)) (fill (type background)))
       )
-      (symbol "usb_msx:74HCT245_1_1"
+      (symbol "74HCT245_1_1"
         (pin input line (at -12.7 12.7 0) (length 2.54) (name "DIR" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin bidirectional line (at -12.7 10.16 0) (length 2.54) (name "A1" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
         (pin bidirectional line (at -12.7 7.62 0) (length 2.54) (name "A2" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
@@ -211,10 +211,10 @@ def sym_generic_2pin(name, ref, value, footprint, jlcpcb=""):
       (property "Value" "{name}" (at 0 -2.54 0) (effects (font (size 1.27 1.27))))
       (property "Footprint" "{footprint}" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide)){jlc_prop}
-      (symbol "usb_msx:{name}_0_1"
+      (symbol "{name}_0_1"
         (polyline (pts (xy 0 1.27) (xy 0 -1.27)) (stroke (width 0) (type default)) (fill (type none)))
       )
-      (symbol "usb_msx:{name}_1_1"
+      (symbol "{name}_1_1"
         (pin passive line (at 0 3.81 270) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin passive line (at 0 -3.81 90) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
       )
@@ -233,10 +233,10 @@ def sym_xc6206():
       (property "Footprint" "Package_TO_SOT_SMD:SOT-23" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "JLCPCB" "C5446" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:XC6206P332MR_0_1"
+      (symbol "XC6206P332MR_0_1"
         (rectangle (start -7.62 6.35) (end 7.62 -6.35) (stroke (width 0.254) (type default)) (fill (type background)))
       )
-      (symbol "usb_msx:XC6206P332MR_1_1"
+      (symbol "XC6206P332MR_1_1"
         (pin power_in line (at 0 -8.89 90) (length 2.54) (name "GND" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin power_out line (at 10.16 0 180) (length 2.54) (name "VOUT" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
         (pin power_in line (at -10.16 0 0) (length 2.54) (name "VIN" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
@@ -256,12 +256,12 @@ def sym_crystal():
       (property "Footprint" "Crystal:Crystal_SMD_3225-4Pin_3.2x2.5mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "JLCPCB" "C9002" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:Crystal_4Pin_0_1"
+      (symbol "Crystal_4Pin_0_1"
         (polyline (pts (xy -1.27 -2.54) (xy -1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
         (polyline (pts (xy 1.27 -2.54) (xy 1.27 2.54)) (stroke (width 0.254) (type default)) (fill (type none)))
         (rectangle (start -0.635 2.54) (end 0.635 -2.54) (stroke (width 0.254) (type default)) (fill (type none)))
       )
-      (symbol "usb_msx:Crystal_4Pin_1_1"
+      (symbol "Crystal_4Pin_1_1"
         (pin passive line (at -3.81 0 0) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin passive line (at 3.81 0 180) (length 2.54) (name "3" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
         (pin passive line (at 0 -3.81 90) (length 1.27) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
@@ -281,10 +281,10 @@ def sym_usb_a():
       (property "Value" "USB_A" (at 0 -8.89 0) (effects (font (size 1.27 1.27))))
       (property "Footprint" "Connector_USB:USB_A_Molex_67643_Horizontal" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:USB_A_0_1"
+      (symbol "USB_A_0_1"
         (rectangle (start -5.08 7.62) (end 5.08 -7.62) (stroke (width 0.254) (type default)) (fill (type background)))
       )
-      (symbol "usb_msx:USB_A_1_1"
+      (symbol "USB_A_1_1"
         (pin power_out line (at 7.62 5.08 180) (length 2.54) (name "VBUS" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin bidirectional line (at 7.62 2.54 180) (length 2.54) (name "D-" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
         (pin bidirectional line (at 7.62 0 180) (length 2.54) (name "D+" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
@@ -305,10 +305,10 @@ def sym_db9_male():
       (property "Value" "DB9_Male" (at 0 -15.24 0) (effects (font (size 1.27 1.27))))
       (property "Footprint" "Connector_Dsub:DSUB-9_Male_Horizontal_P2.77x2.84mm_EdgePinOffset7.70mm_Housed_MountingHolesOffset9.12mm" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:DB9_Male_0_1"
+      (symbol "DB9_Male_0_1"
         (rectangle (start -5.08 13.97) (end 5.08 -13.97) (stroke (width 0.254) (type default)) (fill (type background)))
       )
-      (symbol "usb_msx:DB9_Male_1_1"
+      (symbol "DB9_Male_1_1"
         (pin passive line (at 7.62 11.43 180) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin passive line (at 7.62 8.89 180) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
         (pin passive line (at 7.62 6.35 180) (length 2.54) (name "3" (effects (font (size 1.016 1.016)))) (number "3" (effects (font (size 1.016 1.016)))))
@@ -334,13 +334,13 @@ def sym_sw_push():
       (property "Value" "SW_Push" (at 0 -3.81 0) (effects (font (size 1.27 1.27))))
       (property "Footprint" "Button_Switch_SMD:SW_SPST_TL3342" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:SW_Push_0_1"
+      (symbol "SW_Push_0_1"
         (circle (center -2.032 0) (radius 0.508) (stroke (width 0) (type default)) (fill (type none)))
         (circle (center 2.032 0) (radius 0.508) (stroke (width 0) (type default)) (fill (type none)))
         (polyline (pts (xy -1.524 1.016) (xy 1.524 1.016)) (stroke (width 0) (type default)) (fill (type none)))
         (polyline (pts (xy 0 1.016) (xy 0 2.032)) (stroke (width 0) (type default)) (fill (type none)))
       )
-      (symbol "usb_msx:SW_Push_1_1"
+      (symbol "SW_Push_1_1"
         (pin passive line (at -5.08 0 0) (length 2.54) (name "1" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
         (pin passive line (at 5.08 0 180) (length 2.54) (name "2" (effects (font (size 1.016 1.016)))) (number "2" (effects (font (size 1.016 1.016)))))
       )
@@ -359,11 +359,11 @@ def sym_power(name, ptype="power_in"):
       (property "Value" "{name}" (at 0 3.81 0) (effects (font (size 1.27 1.27))))
       (property "Footprint" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
       (property "Datasheet" "" (at 0 0 0) (effects (font (size 1.27 1.27)) hide))
-      (symbol "usb_msx:{name}_0_1"
+      (symbol "{name}_0_1"
         (polyline (pts (xy 0 0) (xy 0 1.27)) (stroke (width 0) (type default)) (fill (type none)))
         (polyline (pts (xy -0.762 1.27) (xy 0.762 1.27)) (stroke (width 0.254) (type default)) (fill (type none)))
       )
-      (symbol "usb_msx:{name}_1_1"
+      (symbol "{name}_1_1"
         (pin {ptype} line (at 0 0 90) (length 0) (name "{name}" (effects (font (size 1.016 1.016)))) (number "1" (effects (font (size 1.016 1.016)))))
       )
     )'''
@@ -373,6 +373,9 @@ def sym_power(name, ptype="power_in"):
 
 def generate_schematic():
     """Generate the complete KiCad 8 schematic file."""
+
+    # Root sheet UUID — must be consistent across all component instance paths
+    sheet_uuid = "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
 
     # Component instance helper
     instances = []  # (ref, unit, uuid)
@@ -399,7 +402,7 @@ def generate_schematic():
     {chr(10).join(props)}
     (instances
       (project "usb-to-msx-mouse"
-        (path "/{uid()}" (reference "{ref}") (unit 1))
+        (path "/{sheet_uuid}" (reference "{ref}") (unit 1))
       )
     )
   )'''
@@ -427,7 +430,7 @@ def generate_schematic():
     (property "Value" "{name}" (at {x} {y+3} 0) (effects (font (size 1.27 1.27))))
     (instances
       (project "usb-to-msx-mouse"
-        (path "/{uid()}" (reference "#{name}") (unit 1))
+        (path "/{sheet_uuid}" (reference "#{name}") (unit 1))
       )
     )
   )'''
@@ -828,9 +831,7 @@ def generate_schematic():
     lib_symbols.append(sym_power("+3V3"))
     lib_symbols.append(sym_power("GND"))
 
-    # Final output
-    sheet_uuid = "e63e39d7-6ac0-4ffd-8aa3-1841a4541b55"
-
+    # Final output — sheet_uuid defined at top of function
     output = f'''(kicad_sch
   (version 20231120)
   (generator "usb_msx_gen")

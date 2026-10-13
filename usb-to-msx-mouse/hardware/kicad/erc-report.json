@@ -1,0 +1,4403 @@
+{
+    "$schema": "https://schemas.kicad.org/erc.v1.json",
+    "coordinate_units": "mm",
+    "date": "2026-03-12T05:10:16+0000",
+    "kicad_version": "9.0.7",
+    "sheets": [
+        {
+            "path": "/",
+            "uuid_path": "/e63e39d7-6ac0-4ffd-8aa3-1841a4541b55",
+            "violations": [
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 1 [VBUS, Power output, Line]",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.7992
+                            },
+                            "uuid": "f965394d-2bcb-4557-b87c-f4832675f6ad"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 2 [D-, Bidirectional, Line]",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.8246
+                            },
+                            "uuid": "2dc7cf65-d8b6-4c53-b9b0-9547c71d5d64"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 4 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.8754
+                            },
+                            "uuid": "cfb43208-8385-42c6-b44c-22bd2f716f80"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0132 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 0.5062,
+                                "y": 0.9208
+                            },
+                            "uuid": "8d88bdcb-828d-4ef6-8ebf-fa25efad5840"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0131 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 0.5062,
+                                "y": 0.9254
+                            },
+                            "uuid": "4fd57e4a-6a00-48ee-a3da-d6434d33d2ce"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0101 Pin 1 [+5V, Power input, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.3919
+                            },
+                            "uuid": "9e56a333-dcc7-483e-a59d-e71245ab8f91"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0101 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.21,
+                                "y": 0.6581
+                            },
+                            "uuid": "86bb776c-1d27-4a2b-844c-92b1dfa02614"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Input Power pin not driven by any Output Power pins",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 24 [DVDD, Power input, Line]",
+                            "pos": {
+                                "x": 1.173,
+                                "y": 1.2667
+                            },
+                            "uuid": "faa146e0-7d15-4389-ab8a-e08a38c52c37"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "power_pin_not_driven"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'VREG_VOUT'",
+                            "pos": {
+                                "x": 1.2746,
+                                "y": 1.2667
+                            },
+                            "uuid": "77ff4661-fe12-44eb-a953-25a3893c4297"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 0.9492,
+                                "y": 1.55
+                            },
+                            "uuid": "42837c6b-22ee-417f-bc7e-4204c9e6d847"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'DVDD'",
+                            "pos": {
+                                "x": 1.2746,
+                                "y": 1.3
+                            },
+                            "uuid": "2652e8a5-b209-4855-9446-3f709cf2607e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 Pin 2 [2, Passive, Line]",
+                            "pos": {
+                                "x": 1.0508,
+                                "y": 1.55
+                            },
+                            "uuid": "22d98f52-b4c1-4ed7-9add-68b56d9f8a15"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0121 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.07,
+                                "y": 1.55
+                            },
+                            "uuid": "11f383f5-afdd-4ed2-b7d2-ab71a4ff1a96"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 1 [~{CS}, Input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 1.5119
+                            },
+                            "uuid": "42ba9fc5-0aba-4b3d-8b0e-28f9704d73b5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 1 [~{CS}, Input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 1.5119
+                            },
+                            "uuid": "42ba9fc5-0aba-4b3d-8b0e-28f9704d73b5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'QSPI_SCLK'",
+                            "pos": {
+                                "x": 1.17,
+                                "y": 1.5373
+                            },
+                            "uuid": "b1a7f2e4-49f0-4df5-95dc-cbe79386fe5b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 5 [DI/IO0, Input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 1.5373
+                            },
+                            "uuid": "dbbfb9da-f5f1-4b68-b5c7-a2fa9cc5517e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 5 [DI/IO0, Input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 1.5373
+                            },
+                            "uuid": "dbbfb9da-f5f1-4b68-b5c7-a2fa9cc5517e"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'QSPI_SD0'",
+                            "pos": {
+                                "x": 1.17,
+                                "y": 1.5627
+                            },
+                            "uuid": "dafd14f2-9271-4a82-93bd-09e922528bf3"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 6 [CLK, Input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 1.5627
+                            },
+                            "uuid": "ba4c9c19-1b1d-4225-a41d-0bf103b722a7"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 6 [CLK, Input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 1.5627
+                            },
+                            "uuid": "ba4c9c19-1b1d-4225-a41d-0bf103b722a7"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'QSPI_SS'",
+                            "pos": {
+                                "x": 1.17,
+                                "y": 1.5881
+                            },
+                            "uuid": "047a6c96-bd7f-40a2-b86b-16fe98bd55f4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'XIN'",
+                            "pos": {
+                                "x": 1.5,
+                                "y": 1.35
+                            },
+                            "uuid": "9456adb8-01b8-4978-a544-f4485f531ba5"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol Y1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.5119,
+                                "y": 1.35
+                            },
+                            "uuid": "e22bb615-be43-4c18-ae19-7430878a4b7b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 2 [DO/IO1, Output, Line]",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 1.5119
+                            },
+                            "uuid": "ffa42e69-42fe-41d8-afa3-4fa9e32bda8f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 2 [A1, Bidirectional, Line]",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 0.8984
+                            },
+                            "uuid": "6ec55208-50cf-4752-88d8-d7f6ab205829"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 3 [~{WP}/IO2, Input, Line]",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 1.5373
+                            },
+                            "uuid": "700e29bd-b6c7-4def-89af-f172a94c56f9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 3 [~{WP}/IO2, Input, Line]",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 1.5373
+                            },
+                            "uuid": "700e29bd-b6c7-4def-89af-f172a94c56f9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol Y1 Pin 3 [3, Passive, Line]",
+                            "pos": {
+                                "x": 1.5881,
+                                "y": 1.35
+                            },
+                            "uuid": "ccc6d789-7918-42b1-af70-164c77e82ebd"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 3 [A2, Bidirectional, Line]",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 0.9238
+                            },
+                            "uuid": "0cd9ed7e-fd59-40ca-9d92-8913405d55f4"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'XOUT'",
+                            "pos": {
+                                "x": 1.6,
+                                "y": 1.35
+                            },
+                            "uuid": "1c0f3483-7ec0-46fd-b179-229e635b0261"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 7 [~{HOLD}/IO3, Input, Line]",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 1.5627
+                            },
+                            "uuid": "82120988-305f-4d38-9353-c1dafa9a910c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Input pin not driven by any Output pins",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 7 [~{HOLD}/IO3, Input, Line]",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 1.5627
+                            },
+                            "uuid": "82120988-305f-4d38-9353-c1dafa9a910c"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_driven"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'QSPI_SD3'",
+                            "pos": {
+                                "x": 1.43,
+                                "y": 1.5373
+                            },
+                            "uuid": "57dd7804-b367-44fc-bead-0e5d643797f3"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 4 [A3, Bidirectional, Line]",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 0.9492
+                            },
+                            "uuid": "b3d2acfe-5b09-420f-807a-e46a6ed4e9be"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'QSPI_SD2'",
+                            "pos": {
+                                "x": 1.43,
+                                "y": 1.5627
+                            },
+                            "uuid": "2650f22a-8ad1-43e9-acad-a6918165e787"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Label not connected to anything",
+                    "items": [
+                        {
+                            "description": "Label 'QSPI_SD1'",
+                            "pos": {
+                                "x": 1.43,
+                                "y": 1.5881
+                            },
+                            "uuid": "d020ccfe-517f-4663-a7de-6707359e9ff9"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "label_dangling"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin 9 [9, Passive, Line]",
+                            "pos": {
+                                "x": 2.6762,
+                                "y": 1.0889
+                            },
+                            "uuid": "b6520591-8d89-4f17-8bb1-5c1c6be3e95f"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Pin not connected",
+                    "items": [
+                        {
+                            "description": "Symbol R4 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.1619
+                            },
+                            "uuid": "0acf17a1-12bc-4c1c-bc8f-47bfe407633b"
+                        }
+                    ],
+                    "severity": "error",
+                    "type": "pin_not_connected"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0105 Pin 1 [+5V, Power input, Line]",
+                            "pos": {
+                                "x": 0.58,
+                                "y": 0.7119
+                            },
+                            "uuid": "56f5314b-fc9d-4f9c-8d47-81e2895212bc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol F1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 0.58,
+                                "y": 0.7119
+                            },
+                            "uuid": "a994d0b1-f0a3-4ea8-9036-04b4651297aa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0105 [+5V]",
+                            "pos": {
+                                "x": 0.58,
+                                "y": 0.7119
+                            },
+                            "uuid": "788eb299-d6e2-4464-b4f4-482e55a89b03"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol J1 Pin 1 [VBUS, Power output, Line]",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.7992
+                            },
+                            "uuid": "f965394d-2bcb-4557-b87c-f4832675f6ad"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol J1 [USB_A]",
+                            "pos": {
+                                "x": 0.4,
+                                "y": 0.85
+                            },
+                            "uuid": "f7e81254-af65-45b1-a7a4-42acd68d3ddf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol F1 [Polyfuse]",
+                            "pos": {
+                                "x": 0.58,
+                                "y": 0.75
+                            },
+                            "uuid": "7ba9aef5-0a92-489c-8a85-01c03526466c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.2438 mm",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.85
+                            },
+                            "uuid": "c6cbcb63-6044-46fe-86ae-dea86ee4dcec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1738 mm",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.8754
+                            },
+                            "uuid": "370e2549-8dea-485a-8ba0-e33efc66c650"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0300 mm",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.8754
+                            },
+                            "uuid": "454c4ed5-fc2f-48b3-85d1-853ca368c66d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0300 mm",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.8754
+                            },
+                            "uuid": "454c4ed5-fc2f-48b3-85d1-853ca368c66d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0300 mm",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.9008
+                            },
+                            "uuid": "2c4c124b-171c-4d3f-925d-e6468d4ba84a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1038 mm",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.9008
+                            },
+                            "uuid": "fd618c4f-f7e5-4c74-b4cf-6932cb039420"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 0.7919
+                            },
+                            "uuid": "3d0f3e19-6687-4eb7-97a0-4b661f3e20fa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0300 mm",
+                            "pos": {
+                                "x": 0.4762,
+                                "y": 0.9008
+                            },
+                            "uuid": "2c4c124b-171c-4d3f-925d-e6468d4ba84a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0132 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 0.5062,
+                                "y": 0.9208
+                            },
+                            "uuid": "8d88bdcb-828d-4ef6-8ebf-fa25efad5840"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0132 [GND]",
+                            "pos": {
+                                "x": 0.5062,
+                                "y": 0.9208
+                            },
+                            "uuid": "ab0db29d-819c-4a6d-8d5d-1aee4f5827d8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol R1 [R]",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 0.83
+                            },
+                            "uuid": "e4de1ca1-4a4d-4d0d-82a3-32ccca791987"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0131 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 0.5062,
+                                "y": 0.9254
+                            },
+                            "uuid": "4fd57e4a-6a00-48ee-a3da-d6434d33d2ce"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0131 [GND]",
+                            "pos": {
+                                "x": 0.5062,
+                                "y": 0.9254
+                            },
+                            "uuid": "08d1f052-432a-40cd-a182-885f68b28f20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R2 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 0.72,
+                                "y": 0.7919
+                            },
+                            "uuid": "55369c2d-7963-4ecd-a3c9-df28cf91f1ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.1127 mm",
+                            "pos": {
+                                "x": 0.58,
+                                "y": 0.9008
+                            },
+                            "uuid": "d9875889-f70f-413d-88ee-0ef538b2c134"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0073 mm",
+                            "pos": {
+                                "x": 0.65,
+                                "y": 0.8754
+                            },
+                            "uuid": "cb770086-69db-4bb8-8f72-054f92b453a4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol R2 [R]",
+                            "pos": {
+                                "x": 0.72,
+                                "y": 0.83
+                            },
+                            "uuid": "148f78ed-df95-4c00-8361-da43b82b00e7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0181 mm",
+                            "pos": {
+                                "x": 0.72,
+                                "y": 0.85
+                            },
+                            "uuid": "94a70a32-d363-401a-af8d-bbef856b9e24"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0105 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.5819
+                            },
+                            "uuid": "01f977be-0901-4b64-bd51-21fca15677ca"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.5819
+                            },
+                            "uuid": "765c1b57-c97b-48c0-91bc-6c3d38214724"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0105 [+3V3]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.5819
+                            },
+                            "uuid": "49cfbf09-0072-4977-9db1-28812885c2a1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C1 [C]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.62
+                            },
+                            "uuid": "5535386d-67bd-463c-882d-403a7154ebbc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C2 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.03,
+                                "y": 0.5819
+                            },
+                            "uuid": "1a982c1f-259d-4cd8-a439-8c730ec5af7f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0106 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.03,
+                                "y": 0.5819
+                            },
+                            "uuid": "816183b8-d7c3-4b00-bca2-dd66f5a65efb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0106 [+3V3]",
+                            "pos": {
+                                "x": 1.03,
+                                "y": 0.5819
+                            },
+                            "uuid": "3ced724f-7cc3-452c-900b-3238dd678016"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C15 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.3919
+                            },
+                            "uuid": "93a95514-8186-4192-a0e4-bc200284f418"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0101 Pin 1 [+5V, Power input, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.3919
+                            },
+                            "uuid": "9e56a333-dcc7-483e-a59d-e71245ab8f91"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0101 [+5V]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.3919
+                            },
+                            "uuid": "504451b3-db24-4da3-b896-174f3428d623"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0108 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.6581
+                            },
+                            "uuid": "00fddf1a-d98f-42dc-b820-4596e71ceb87"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0108 [GND]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.6581
+                            },
+                            "uuid": "497b2363-cdc4-4146-9e2d-2c0b0a106c11"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C15 [C]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.43
+                            },
+                            "uuid": "2bf7fcbf-5989-4757-8715-96e1372c73e3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C2 [C]",
+                            "pos": {
+                                "x": 1.03,
+                                "y": 0.62
+                            },
+                            "uuid": "30a84a0a-af43-4ba2-8586-5c33189f333e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C3 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.06,
+                                "y": 0.5819
+                            },
+                            "uuid": "3320bb8a-f2c2-4527-8ec1-11d6c794fd65"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0104 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.06,
+                                "y": 0.5819
+                            },
+                            "uuid": "78c2d682-82b6-4812-8032-34c908234fba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0104 [+3V3]",
+                            "pos": {
+                                "x": 1.06,
+                                "y": 0.5819
+                            },
+                            "uuid": "105671b3-9696-46e1-8343-158f740242e8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0107 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.4681
+                            },
+                            "uuid": "078fc5ce-42ed-4ae6-8d27-91be56fbf763"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0107 [GND]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.4681
+                            },
+                            "uuid": "b4a65af7-8556-49c2-a47a-9484f11d01d1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0109 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.03,
+                                "y": 0.6581
+                            },
+                            "uuid": "2350b50e-5bb0-4535-a675-5cb52d9e1841"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0109 [GND]",
+                            "pos": {
+                                "x": 1.03,
+                                "y": 0.6581
+                            },
+                            "uuid": "e7d9dd2e-8134-449f-b689-bde7d73a7354"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C3 [C]",
+                            "pos": {
+                                "x": 1.06,
+                                "y": 0.62
+                            },
+                            "uuid": "be73c6c9-81be-4ef1-87fc-72edce78b217"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0102 Pin 1 [+5V, Power input, Line]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.35
+                            },
+                            "uuid": "a92559c7-4d8c-4963-8723-1ece39e7f1de"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0102 [+5V]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.35
+                            },
+                            "uuid": "b4a2392b-7a9b-4087-b22c-1b4191017189"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0103 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.09,
+                                "y": 0.5819
+                            },
+                            "uuid": "4f4328cb-15be-4331-81ea-deee1bfa0dda"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C4 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.09,
+                                "y": 0.5819
+                            },
+                            "uuid": "de5fa7d5-6f96-4a91-83c6-faf943d75fbc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0103 [+3V3]",
+                            "pos": {
+                                "x": 1.09,
+                                "y": 0.5819
+                            },
+                            "uuid": "b91fe0f2-32c5-4343-94cb-a44149f066fb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0110 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.06,
+                                "y": 0.6581
+                            },
+                            "uuid": "8aa1a9c7-00d3-4b81-bba4-f0fb03564821"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0110 [GND]",
+                            "pos": {
+                                "x": 1.06,
+                                "y": 0.6581
+                            },
+                            "uuid": "6d8c87a7-6ffd-4ccd-9464-ec20522ed843"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U4 Pin 3 [VIN, Power input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 0.35
+                            },
+                            "uuid": "6dcae4d8-0f5a-4ac8-8122-936c72c91c20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0184 mm",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 0.35
+                            },
+                            "uuid": "95abd41d-dcde-4c7e-9df0-d2501b3b0133"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C4 [C]",
+                            "pos": {
+                                "x": 1.09,
+                                "y": 0.62
+                            },
+                            "uuid": "5f3238bf-c232-4ba1-bf6d-93c6aceffaf4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C5 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.5819
+                            },
+                            "uuid": "b13d1898-66cc-4b61-8d76-34de5b3ce2f6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0102 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.5819
+                            },
+                            "uuid": "d383bc5d-3ac3-4726-808a-1daa7f11ab51"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0102 [+3V3]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.5819
+                            },
+                            "uuid": "7f40f0b5-fcb0-4056-9d75-0418c87d8505"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0104 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.09,
+                                "y": 0.6581
+                            },
+                            "uuid": "fa8d2104-7a2d-4529-865b-51868a931fcd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0104 [GND]",
+                            "pos": {
+                                "x": 1.09,
+                                "y": 0.6581
+                            },
+                            "uuid": "5f42dda6-b710-4328-b7cf-8a48cc7869a0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C5 [C]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.62
+                            },
+                            "uuid": "0938d6ad-1977-4171-99c2-d0edf786ee57"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C6 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.5819
+                            },
+                            "uuid": "027120f0-3186-47cb-8f25-571db8fb60c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0107 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.5819
+                            },
+                            "uuid": "ddecfd59-3f73-4fff-8dd1-b1c03b135ab3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0107 [+3V3]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.5819
+                            },
+                            "uuid": "b7c739ce-316d-4647-9469-8690e5a60e81"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0105 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.6581
+                            },
+                            "uuid": "50703d54-5e67-4c00-9ad3-1cdf43540b1c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0105 [GND]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 0.6581
+                            },
+                            "uuid": "d0e130cb-04df-4e03-b83b-1f91d509b051"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C6 [C]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.62
+                            },
+                            "uuid": "1fe8aa11-efc5-4ef4-b230-7befb3d7a1fd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C7 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.5819
+                            },
+                            "uuid": "6e6b81cb-2218-4525-ada1-aa30ae7b2ed5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0108 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.5819
+                            },
+                            "uuid": "a53664cf-0cfd-4775-82a5-1ad9ac2778a8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0108 [+3V3]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.5819
+                            },
+                            "uuid": "082c82f9-e28b-4048-89d7-8ac81fb7ba91"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0106 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.6581
+                            },
+                            "uuid": "3162a92a-ec60-4852-b5a1-dd9c78a4360e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0106 [GND]",
+                            "pos": {
+                                "x": 1.15,
+                                "y": 0.6581
+                            },
+                            "uuid": "196590e8-9851-4339-9913-fe680c2c870a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C7 [C]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.62
+                            },
+                            "uuid": "5001278a-0262-417d-90fd-43d5c3e25b54"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C8 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.21,
+                                "y": 0.5819
+                            },
+                            "uuid": "7ec414f2-057e-4d8b-8c42-c743a95de682"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0109 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.21,
+                                "y": 0.5819
+                            },
+                            "uuid": "c1f3ace1-5e5b-485b-9298-4cdd19472283"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0109 [+3V3]",
+                            "pos": {
+                                "x": 1.21,
+                                "y": 0.5819
+                            },
+                            "uuid": "65ad36b6-6f3a-4a49-8852-1866dcf26ceb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol U4 [XC6206P332MR]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.35
+                            },
+                            "uuid": "8ff50775-0514-4597-a676-7b213899dfcd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0111 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.6581
+                            },
+                            "uuid": "0c49329a-b5a2-4364-8cd9-096896ab716d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0111 [GND]",
+                            "pos": {
+                                "x": 1.18,
+                                "y": 0.6581
+                            },
+                            "uuid": "32cbed09-7a6d-449b-8eb2-ab04aa7ff601"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C8 [C]",
+                            "pos": {
+                                "x": 1.21,
+                                "y": 0.62
+                            },
+                            "uuid": "d81807e1-908d-499c-a833-10b34ee68d84"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V3 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.24,
+                                "y": 0.5819
+                            },
+                            "uuid": "7f6c13b6-c2e2-4abc-b950-8a2cfa9cb7fb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C9 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.24,
+                                "y": 0.5819
+                            },
+                            "uuid": "f84506e0-4b55-4cfc-9b8f-263cf40da68d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V3 [+3V3]",
+                            "pos": {
+                                "x": 1.24,
+                                "y": 0.5819
+                            },
+                            "uuid": "77878e6c-f1e4-43d0-90dd-0bd7d6eb6278"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0112 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.4389
+                            },
+                            "uuid": "815ca546-11d3-417d-bf92-6d312112617c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0112 [GND]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.4389
+                            },
+                            "uuid": "cba57338-615e-4d6b-92a7-7d413769c61d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U1 Pin 2 [GPIO0, Bidirectional, Line]",
+                            "pos": {
+                                "x": 1.1349,
+                                "y": 0.7714
+                            },
+                            "uuid": "c33baa3c-4ec3-476d-a449-df8f4f199b95"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0101 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.21,
+                                "y": 0.6581
+                            },
+                            "uuid": "86bb776c-1d27-4a2b-844c-92b1dfa02614"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0101 [GND]",
+                            "pos": {
+                                "x": 1.21,
+                                "y": 0.6581
+                            },
+                            "uuid": "f782c81e-2d66-40ec-a04d-b9639a4df611"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.11,
+                                "y": 0.8222
+                            },
+                            "uuid": "37ce59a8-136e-4946-8849-c46ae2ba2df1"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C9 [C]",
+                            "pos": {
+                                "x": 1.24,
+                                "y": 0.62
+                            },
+                            "uuid": "9ccb6477-7f6b-49ac-b778-1b68af93f755"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0120 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 0.7079
+                            },
+                            "uuid": "2e0afc00-fe73-4c80-ad0c-cbb5161b03d7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0120 [+3V3]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 0.7079
+                            },
+                            "uuid": "f19b8f65-8fdc-4ba7-b985-d2811589d284"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.11,
+                                "y": 0.8476
+                            },
+                            "uuid": "ab086cf9-44c6-443e-847b-c547d1f2af20"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0102 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.24,
+                                "y": 0.6581
+                            },
+                            "uuid": "7a288392-931b-462e-bd83-d741508e31c8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0102 [GND]",
+                            "pos": {
+                                "x": 1.24,
+                                "y": 0.6581
+                            },
+                            "uuid": "225651cc-be87-4a6e-a560-7fc5c85be13f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0101 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.28,
+                                "y": 0.5819
+                            },
+                            "uuid": "4876d2f6-fb50-44d9-9583-e47e51a733c6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C14 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.28,
+                                "y": 0.5819
+                            },
+                            "uuid": "d2530801-02ec-41f2-8e12-f26738b14438"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0101 [+3V3]",
+                            "pos": {
+                                "x": 1.28,
+                                "y": 0.5819
+                            },
+                            "uuid": "d909a6ba-c732-4df5-965e-f1c6f9f5d295"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.11,
+                                "y": 0.873
+                            },
+                            "uuid": "6f6f2d94-c2e8-432b-9fba-bcb13d332e93"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0116 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.2238,
+                                "y": 0.7079
+                            },
+                            "uuid": "e68eaaca-2034-4289-8032-f9d94370ad77"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0116 [+3V3]",
+                            "pos": {
+                                "x": 1.2238,
+                                "y": 0.7079
+                            },
+                            "uuid": "3b396ed8-1309-4605-86a7-368efaedc923"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C14 [C]",
+                            "pos": {
+                                "x": 1.28,
+                                "y": 0.62
+                            },
+                            "uuid": "7cb7c1ab-23d8-404d-bd07-6eb0dae0db03"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.11,
+                                "y": 0.8984
+                            },
+                            "uuid": "055a85c7-9d39-4660-8c2d-922daba9e6df"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0119 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.2492,
+                                "y": 0.7079
+                            },
+                            "uuid": "e8d08731-f624-4cfd-87ae-291a3da1f8ad"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0119 [+3V3]",
+                            "pos": {
+                                "x": 1.2492,
+                                "y": 0.7079
+                            },
+                            "uuid": "a715ccf9-573a-45f7-bb10-60fdee325acd"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0103 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.28,
+                                "y": 0.6581
+                            },
+                            "uuid": "baaccd0e-38ef-4b63-bb09-d6263ce2dafa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0103 [GND]",
+                            "pos": {
+                                "x": 1.28,
+                                "y": 0.6581
+                            },
+                            "uuid": "9a98ce90-a185-48ef-8fb2-63f658ef93f6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.11,
+                                "y": 0.9238
+                            },
+                            "uuid": "a31cb396-13af-41e4-af0a-1c2f3bd3652d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0184 mm",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 0.35
+                            },
+                            "uuid": "0f68e239-e480-496e-8a13-d3c738bb8efa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0117 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.2746,
+                                "y": 0.7079
+                            },
+                            "uuid": "7814da8c-813a-404f-8008-f48c3b0dbe1d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0117 [+3V3]",
+                            "pos": {
+                                "x": 1.2746,
+                                "y": 0.7079
+                            },
+                            "uuid": "c51448eb-95df-4f70-ac90-bc1b5bcb118b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.11,
+                                "y": 0.9492
+                            },
+                            "uuid": "e7eb3964-b23b-4743-aecd-70699d382595"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0111 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.42,
+                                "y": 0.35
+                            },
+                            "uuid": "8136b820-98de-4c75-bba9-7dd16a3ea202"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0111 [+3V3]",
+                            "pos": {
+                                "x": 1.42,
+                                "y": 0.35
+                            },
+                            "uuid": "8f454e03-1487-4da5-b108-99ffcffc1fdb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.11,
+                                "y": 0.9746
+                            },
+                            "uuid": "b5e0a004-b212-4eb2-9e0a-a29a0a04454e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0118 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.7079
+                            },
+                            "uuid": "5109d6dd-1541-4198-a1ad-f85c7113bc4d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0118 [+3V3]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 0.7079
+                            },
+                            "uuid": "1596d1f0-993f-467f-8ac8-7691f12040d2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0121 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.3254,
+                                "y": 0.7079
+                            },
+                            "uuid": "8be10aaa-3005-43c1-b8e2-7ec1c2169be8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0121 [+3V3]",
+                            "pos": {
+                                "x": 1.3254,
+                                "y": 0.7079
+                            },
+                            "uuid": "162124f4-93ce-449a-88df-226eca03aa67"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0123 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.3508,
+                                "y": 0.7079
+                            },
+                            "uuid": "ca2d5ef5-919b-462f-a547-71629e4378ad"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0123 [+3V3]",
+                            "pos": {
+                                "x": 1.3508,
+                                "y": 0.7079
+                            },
+                            "uuid": "857431f3-ce47-49f7-829d-5c477a90f991"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C16 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 0.3919
+                            },
+                            "uuid": "7114462a-1b5b-4f3f-926c-3f62b8c6aa1e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0110 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 0.3919
+                            },
+                            "uuid": "deeeba2d-09b8-49c9-a9e6-208fbbd6c79d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0110 [+3V3]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 0.3919
+                            },
+                            "uuid": "5e30e6f8-0b40-43bf-a029-45fedb3caec6"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C16 [C]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 0.43
+                            },
+                            "uuid": "b8db17c3-9e0c-4db3-80b3-96f34db24008"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0122 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.3762,
+                                "y": 0.7079
+                            },
+                            "uuid": "b7e0907d-7156-402f-b902-0d4ec4e68776"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0122 [+3V3]",
+                            "pos": {
+                                "x": 1.3762,
+                                "y": 0.7079
+                            },
+                            "uuid": "7a1ab842-bb36-4a99-8025-a22f52785ace"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0113 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 0.4681
+                            },
+                            "uuid": "15306865-0e9f-479f-8c2c-392b0d6873ab"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0113 [GND]",
+                            "pos": {
+                                "x": 1.48,
+                                "y": 0.4681
+                            },
+                            "uuid": "6de1a6b2-af15-45eb-bdc3-3558b5a5d687"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0124 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 0.7079
+                            },
+                            "uuid": "8e901152-4c75-44c8-b9bd-73e8fe43c67d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0124 [+3V3]",
+                            "pos": {
+                                "x": 1.4016,
+                                "y": 0.7079
+                            },
+                            "uuid": "8d346027-fbf6-4794-b6a1-849c826bc182"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol U1 [RP2040]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 1.0
+                            },
+                            "uuid": "8f2be97e-a8ec-4d27-b220-346661016b10"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0333 mm",
+                            "pos": {
+                                "x": 1.2238,
+                                "y": 1.2667
+                            },
+                            "uuid": "8ad84a5f-3172-4d5b-bea9-569a143409f3"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0249 mm",
+                            "pos": {
+                                "x": 1.4651,
+                                "y": 1.0
+                            },
+                            "uuid": "f9346545-1053-4721-848f-65262b47976c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C13 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.22,
+                                "y": 1.2919
+                            },
+                            "uuid": "691f207f-b166-4f11-8d48-abd1c02a750b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0114 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.2238,
+                                "y": 1.3
+                            },
+                            "uuid": "ebe2f23a-ed43-495b-83f2-cd0b16bdaaba"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0114 [+3V3]",
+                            "pos": {
+                                "x": 1.2238,
+                                "y": 1.3
+                            },
+                            "uuid": "752ae6a3-c038-4343-95a6-60d70798c0e5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C13 [C]",
+                            "pos": {
+                                "x": 1.22,
+                                "y": 1.33
+                            },
+                            "uuid": "e7c05e10-8f72-4720-bb80-f2b180ae3604"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 0.9492,
+                                "y": 1.55
+                            },
+                            "uuid": "42837c6b-22ee-417f-bc7e-4204c9e6d847"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0118 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.22,
+                                "y": 1.3681
+                            },
+                            "uuid": "f3b814a9-9998-45d0-a24c-b194d277f735"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0118 [GND]",
+                            "pos": {
+                                "x": 1.22,
+                                "y": 1.3681
+                            },
+                            "uuid": "3c63ca98-54d9-45b3-bc2d-fe5e76e7c7e2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0333 mm",
+                            "pos": {
+                                "x": 1.3254,
+                                "y": 1.2667
+                            },
+                            "uuid": "ed5d3252-f2f5-4168-9b15-e3eeac12f5fc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R6 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 1.4619
+                            },
+                            "uuid": "9de2586d-aacf-4fff-a02d-ff17893aa3fc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0113 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 1.4619
+                            },
+                            "uuid": "d753b20a-7ce0-4636-b5a0-1a3d36a65072"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0113 [+3V3]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 1.4619
+                            },
+                            "uuid": "fea5f195-ea17-4c2d-9a7f-abe781b15d86"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol SW1 [SW_Push]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 1.55
+                            },
+                            "uuid": "c449ac2f-ff77-4cfb-8e5a-49d2d6d4d653"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0119 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.3254,
+                                "y": 1.3
+                            },
+                            "uuid": "939382af-c6d2-4873-be50-18557d79ff60"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0119 [GND]",
+                            "pos": {
+                                "x": 1.3254,
+                                "y": 1.3
+                            },
+                            "uuid": "5d95dde3-5311-4667-b463-ca0f04b2ebbb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0438 mm",
+                            "pos": {
+                                "x": 1.3762,
+                                "y": 1.2667
+                            },
+                            "uuid": "ba9b555d-193d-4d36-8666-1d75bdc403c9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol R6 [R]",
+                            "pos": {
+                                "x": 1.12,
+                                "y": 1.5
+                            },
+                            "uuid": "65e365dd-9468-476f-a3c3-63ec026e9fec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0121 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.07,
+                                "y": 1.55
+                            },
+                            "uuid": "11f383f5-afdd-4ed2-b7d2-ab71a4ff1a96"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0121 [GND]",
+                            "pos": {
+                                "x": 1.07,
+                                "y": 1.55
+                            },
+                            "uuid": "660c28b3-3327-4e4e-8f76-fe3705c4b886"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.1014 mm",
+                            "pos": {
+                                "x": 1.42,
+                                "y": 1.2667
+                            },
+                            "uuid": "0b20cff6-f229-44b0-b36c-3b4ba3184e1b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0333 mm",
+                            "pos": {
+                                "x": 1.427,
+                                "y": 1.2667
+                            },
+                            "uuid": "4c09c6e4-bb99-46c7-a5e5-4b5450b7f778"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0115 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.42,
+                                "y": 1.2919
+                            },
+                            "uuid": "e3ad7399-3db7-48a5-87c4-0ec7a434e896"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R7 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.42,
+                                "y": 1.2919
+                            },
+                            "uuid": "fc2040fa-1fd5-484c-bd26-efd272db46ef"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0115 [+3V3]",
+                            "pos": {
+                                "x": 1.42,
+                                "y": 1.2919
+                            },
+                            "uuid": "a7d98003-da39-467a-98c0-afbfc86440a7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R5 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 0.8119
+                            },
+                            "uuid": "8b5b7489-2650-4590-a33d-192155a572cc"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U2 Pin 1 [~{CS}, Input, Line]",
+                            "pos": {
+                                "x": 1.1984,
+                                "y": 1.5119
+                            },
+                            "uuid": "42ba9fc5-0aba-4b3d-8b0e-28f9704d73b5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0120 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.427,
+                                "y": 1.3
+                            },
+                            "uuid": "fd4154d2-87a9-4cdf-94e4-2601d7289266"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0120 [GND]",
+                            "pos": {
+                                "x": 1.427,
+                                "y": 1.3
+                            },
+                            "uuid": "e3c2fc03-d14f-4d9b-a515-c45afa689dfb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol R5 [R]",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 0.85
+                            },
+                            "uuid": "9f3ff124-4ce7-4d70-a9ba-295838f8a9c4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol R7 [R]",
+                            "pos": {
+                                "x": 1.42,
+                                "y": 1.33
+                            },
+                            "uuid": "9186cd03-61dd-4005-b079-12af8865f580"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0112 Pin 1 [+3V3, Power input, Line]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 1.4611
+                            },
+                            "uuid": "785bf92f-bb8e-48b3-9503-a14998e93284"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+3V0112 [+3V3]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 1.4611
+                            },
+                            "uuid": "05b08174-ee57-4853-a989-54bbfee5814d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol D2 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 0.9119
+                            },
+                            "uuid": "8f143342-6730-46b2-a388-582110f5160d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0238 mm",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 0.9119
+                            },
+                            "uuid": "c8845447-acc7-47c0-a67a-3527936658d9"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol D2 [LED]",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 0.95
+                            },
+                            "uuid": "a973bcb7-ff0b-4bd4-b674-34c9abefc872"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0122 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 0.9881
+                            },
+                            "uuid": "029fa6cc-8df6-4b5c-8f9f-5a9e3ef8458a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0122 [GND]",
+                            "pos": {
+                                "x": 1.75,
+                                "y": 0.9881
+                            },
+                            "uuid": "b81894a1-f03c-4247-a7b5-f9bcaf11e628"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol U2 [W25Q16JVSNIQ]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 1.55
+                            },
+                            "uuid": "1fcf3123-8866-45ce-8c5e-e5b8240e09b4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol Y1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.5119,
+                                "y": 1.35
+                            },
+                            "uuid": "e22bb615-be43-4c18-ae19-7430878a4b7b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0125 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 0.873
+                            },
+                            "uuid": "6443b1d7-dba4-4ba2-86e6-b905c3d342ee"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0125 [GND]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 0.873
+                            },
+                            "uuid": "35a6016c-deea-4e7e-845c-63efdbff2560"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C11 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.5,
+                                "y": 1.3919
+                            },
+                            "uuid": "c5626d5e-ef0f-44af-9118-cb7d49f7e5d8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol Y1 [Crystal_4Pin]",
+                            "pos": {
+                                "x": 1.55,
+                                "y": 1.35
+                            },
+                            "uuid": "45849fec-b954-416f-b0f7-353eb26ffb7e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol U3 Pin 1 [DIR, Input, Line]",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 0.873
+                            },
+                            "uuid": "1dcd2b54-c7dc-4d8a-b0c7-e38e5cd7d942"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 0.873
+                            },
+                            "uuid": "5d77b656-cf1b-456b-aa15-96625d991204"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C11 [C]",
+                            "pos": {
+                                "x": 1.5,
+                                "y": 1.43
+                            },
+                            "uuid": "1c94621d-ac30-42fa-90b9-76395f5c1110"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0117 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.55,
+                                "y": 1.3881
+                            },
+                            "uuid": "4c389116-9192-4c65-b765-1dd653064061"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0117 [GND]",
+                            "pos": {
+                                "x": 1.55,
+                                "y": 1.3881
+                            },
+                            "uuid": "0024295d-f7bf-44c5-a282-2fb02b5d4114"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 0.9746
+                            },
+                            "uuid": "e06f69b3-3870-4893-8091-49917243b052"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0115 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 1.6389
+                            },
+                            "uuid": "a14b8d13-cf20-4a14-9745-db0aa919f603"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0115 [GND]",
+                            "pos": {
+                                "x": 1.3,
+                                "y": 1.6389
+                            },
+                            "uuid": "8fb4c672-8851-4c8d-b586-d1b44c34a04e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0114 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.5,
+                                "y": 1.4681
+                            },
+                            "uuid": "ce0bc37c-c652-4ef1-a4ee-dfb816c8b023"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0114 [GND]",
+                            "pos": {
+                                "x": 1.5,
+                                "y": 1.4681
+                            },
+                            "uuid": "b7c3cb88-636d-48ed-a89a-85e90c746a9c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0
+                            },
+                            "uuid": "8f9afec6-02ea-4f0f-a70f-60a628a574f0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0254
+                            },
+                            "uuid": "d5d6b9cd-972a-4aa5-8266-7597aebd0766"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol C12 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 1.6,
+                                "y": 1.3919
+                            },
+                            "uuid": "ffaf98d6-b61a-4653-8f97-3d5c726e2a34"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0508
+                            },
+                            "uuid": "2462c158-cf86-499c-86f3-6ba3b8c98f31"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0124 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0508
+                            },
+                            "uuid": "50f5f91a-c3af-411b-b982-4e4d48073e60"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0124 [GND]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0508
+                            },
+                            "uuid": "4e0c89e3-caf7-419d-866b-ac2d66afdaa0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0123 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0762
+                            },
+                            "uuid": "5c9ea886-b4aa-4741-94f4-420c1e30883b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0762
+                            },
+                            "uuid": "dcfa90c7-fdc9-450d-bc88-4a28dba8fd16"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0123 [GND]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.0762
+                            },
+                            "uuid": "589bc903-3387-4455-aab9-5ec1625ad393"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol C12 [C]",
+                            "pos": {
+                                "x": 1.6,
+                                "y": 1.43
+                            },
+                            "uuid": "f7a1cdcb-1af2-400d-8725-7cbd0ca04014"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 1.0508
+                            },
+                            "uuid": "c4257f63-bcab-4299-9e1b-ca2074cf433c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0126 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.1016
+                            },
+                            "uuid": "3597476b-3f9f-4d76-ac0f-2b5ff11591ca"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.1016
+                            },
+                            "uuid": "78fa3a8e-ea61-462a-b40d-d08cd97247ec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0126 [GND]",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.1016
+                            },
+                            "uuid": "f10fe84b-c73b-4492-b61c-d098b03363b7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Both GND and GPIO2 are attached to the same items; GND will be used in the netlist",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0108 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.0,
+                                "y": 0.6581
+                            },
+                            "uuid": "00fddf1a-d98f-42dc-b820-4596e71ceb87"
+                        },
+                        {
+                            "description": "Label 'GPIO2'",
+                            "pos": {
+                                "x": 1.85,
+                                "y": 1.1016
+                            },
+                            "uuid": "48b40573-2861-4af2-aab8-da75a2a0f582"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "multiple_net_names"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 1.0762
+                            },
+                            "uuid": "77735e2b-9d8c-43fe-ad24-8cc86b43ecde"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0103 Pin 1 [+5V, Power input, Line]",
+                            "pos": {
+                                "x": 2.0,
+                                "y": 0.8222
+                            },
+                            "uuid": "ed04bbeb-aeb6-47c0-a2a9-633cee8b35aa"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0103 [+5V]",
+                            "pos": {
+                                "x": 2.0,
+                                "y": 0.8222
+                            },
+                            "uuid": "30e8e372-076f-43a3-a721-be85a1465818"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0116 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 1.6,
+                                "y": 1.4681
+                            },
+                            "uuid": "e1e5de4f-d3be-4574-8486-478aa9b671ec"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0116 [GND]",
+                            "pos": {
+                                "x": 1.6,
+                                "y": 1.4681
+                            },
+                            "uuid": "90d9cd8c-9dd5-4b0b-b9f1-1ddda5479ad0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0230 mm",
+                            "pos": {
+                                "x": 1.873,
+                                "y": 1.1016
+                            },
+                            "uuid": "da674783-45b4-4713-9a2a-6d755f7d5965"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol U3 [74HCT245]",
+                            "pos": {
+                                "x": 2.0,
+                                "y": 1.0
+                            },
+                            "uuid": "9d7e2d86-e0a8-4e2a-8c7b-0260053e2809"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.4230 mm",
+                            "pos": {
+                                "x": 2.127,
+                                "y": 0.8984
+                            },
+                            "uuid": "1c3d64f6-7d89-4cd3-b858-b4df32b5df22"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.4030 mm",
+                            "pos": {
+                                "x": 2.127,
+                                "y": 0.9238
+                            },
+                            "uuid": "1ff169aa-3a92-41d8-812b-dbaeadca9fff"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0127 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 2.0,
+                                "y": 1.1778
+                            },
+                            "uuid": "45772016-d465-4f3b-945d-2cdae0f18ba5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0127 [GND]",
+                            "pos": {
+                                "x": 2.0,
+                                "y": 1.1778
+                            },
+                            "uuid": "02f4661c-281c-462c-b03d-fb8e056e4d52"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.3830 mm",
+                            "pos": {
+                                "x": 2.127,
+                                "y": 0.9492
+                            },
+                            "uuid": "e5a97f35-c05e-4df0-b019-4537e373b734"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.3630 mm",
+                            "pos": {
+                                "x": 2.127,
+                                "y": 0.9746
+                            },
+                            "uuid": "feb5b4dd-f8c8-496d-83e4-070d9e635ec8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.3430 mm",
+                            "pos": {
+                                "x": 2.127,
+                                "y": 1.0
+                            },
+                            "uuid": "17276ed7-00dc-4d2d-91ef-2f9ec3bc0569"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.3230 mm",
+                            "pos": {
+                                "x": 2.127,
+                                "y": 1.0254
+                            },
+                            "uuid": "051cd627-e643-4559-873e-6777a13341a0"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 2.45,
+                                "y": 1.0254
+                            },
+                            "uuid": "3f5e2c07-807b-4480-942d-a56aca274bbb"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.2262 mm",
+                            "pos": {
+                                "x": 2.45,
+                                "y": 1.0381
+                            },
+                            "uuid": "4f86b63a-716a-4a6c-95bc-505a13901b57"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 2.47,
+                                "y": 1.0
+                            },
+                            "uuid": "ef4b2dfc-4a3b-4575-9fc2-04be29aed7f4"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1862 mm",
+                            "pos": {
+                                "x": 2.49,
+                                "y": 0.9619
+                            },
+                            "uuid": "4b618c88-612c-429e-a863-17f59ddefa2e"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.2062 mm",
+                            "pos": {
+                                "x": 2.47,
+                                "y": 1.0127
+                            },
+                            "uuid": "4ebf3125-bf44-49ce-8448-fc6b86a3aad8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 2.49,
+                                "y": 0.9746
+                            },
+                            "uuid": "b2e30cf9-0611-4380-8629-5ba2f9bec983"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1662 mm",
+                            "pos": {
+                                "x": 2.51,
+                                "y": 0.9365
+                            },
+                            "uuid": "d81d2741-a8b9-4136-a981-bd0032bd04c7"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 2.51,
+                                "y": 0.9492
+                            },
+                            "uuid": "2298f6a6-dcb4-491d-9f15-5fc86278335b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1462 mm",
+                            "pos": {
+                                "x": 2.53,
+                                "y": 0.9111
+                            },
+                            "uuid": "ef3a903b-0f3a-4f40-9a73-f9c836e53cdf"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 2.53,
+                                "y": 0.9238
+                            },
+                            "uuid": "ac8ac8d8-0bb0-4330-8589-14e192a63a2f"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1262 mm",
+                            "pos": {
+                                "x": 2.55,
+                                "y": 0.8857
+                            },
+                            "uuid": "8c482e78-f2d0-442c-a168-b2961d8aec9b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0127 mm",
+                            "pos": {
+                                "x": 2.55,
+                                "y": 0.8984
+                            },
+                            "uuid": "1d10d2b9-d2d0-4325-87f1-612560bd0549"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol J2 [DB9_Male]",
+                            "pos": {
+                                "x": 2.6,
+                                "y": 1.0
+                            },
+                            "uuid": "6feb8da3-7c60-4979-a4b6-351be6d2c8ca"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol J2 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 2.6762,
+                                "y": 0.8857
+                            },
+                            "uuid": "030fd02e-b3ab-4ae4-a107-8d95ed49beac"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Wire, length 0.1295 mm",
+                            "pos": {
+                                "x": 2.6762,
+                                "y": 0.9873
+                            },
+                            "uuid": "fd3c0790-af3d-4b84-92e5-a5bfdb82a4e5"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.1738 mm",
+                            "pos": {
+                                "x": 2.6762,
+                                "y": 1.0635
+                            },
+                            "uuid": "582bd1a9-30ca-4e47-a6e4-3bfe1109a6e8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0438 mm",
+                            "pos": {
+                                "x": 2.6762,
+                                "y": 1.1143
+                            },
+                            "uuid": "4b0be964-9116-4029-8f66-efd2fe540ef2"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0438 mm",
+                            "pos": {
+                                "x": 2.6762,
+                                "y": 1.1397
+                            },
+                            "uuid": "98dc6774-0da6-48c6-af8e-190f83702d53"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Unconnected wire endpoint",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0438 mm",
+                            "pos": {
+                                "x": 2.6762,
+                                "y": 1.1397
+                            },
+                            "uuid": "98dc6774-0da6-48c6-af8e-190f83702d53"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "unconnected_wire_endpoint"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0129 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 2.72,
+                                "y": 1.1143
+                            },
+                            "uuid": "2762b323-ca23-45ca-9176-cdc8845f6114"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0129 [GND]",
+                            "pos": {
+                                "x": 2.72,
+                                "y": 1.1143
+                            },
+                            "uuid": "466824c7-5b65-436e-8dd9-09a9bdde7722"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0130 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 2.72,
+                                "y": 1.1397
+                            },
+                            "uuid": "74893230-8671-46ac-b5f3-2e41e886b398"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0130 [GND]",
+                            "pos": {
+                                "x": 2.72,
+                                "y": 1.1397
+                            },
+                            "uuid": "4515a1d5-6c78-4611-84c5-455152516254"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol D1 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 2.8,
+                                "y": 0.9492
+                            },
+                            "uuid": "3161350d-3deb-4792-a8dc-b3af737f5803"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0104 Pin 1 [+5V, Power input, Line]",
+                            "pos": {
+                                "x": 2.8,
+                                "y": 0.9492
+                            },
+                            "uuid": "fd339598-6a08-4660-9654-527a0da1cd0c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #+5V0104 [+5V]",
+                            "pos": {
+                                "x": 2.8,
+                                "y": 0.9492
+                            },
+                            "uuid": "b1bfc02f-d3d4-4873-9e3f-74a32290e86a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol D1 [D_Schottky]",
+                            "pos": {
+                                "x": 2.8,
+                                "y": 0.9873
+                            },
+                            "uuid": "3d82a304-3698-4847-acde-67239ab2af94"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R3 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.0619
+                            },
+                            "uuid": "6650ad1c-c3eb-4d24-8cf2-f2bd1c2e416d"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0016 mm",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.0635
+                            },
+                            "uuid": "932b8dc3-c5ea-4e9b-b704-a447b0e60523"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol R3 [R]",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.1
+                            },
+                            "uuid": "40cfdc98-4d54-49aa-b452-33f500231c3c"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Vertical Wire, length 0.0119 mm",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.1381
+                            },
+                            "uuid": "ea60440c-ff1e-4fc3-a1e4-97c1b0789c86"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Horizontal Wire, length 0.0500 mm",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.15
+                            },
+                            "uuid": "5ef9f3d1-7b58-4b72-94cc-0a8c63d4c72a"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol R4 Pin 1 [1, Passive, Line]",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.1619
+                            },
+                            "uuid": "0acf17a1-12bc-4c1c-bc8f-47bfe407633b"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol R4 [R]",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.2
+                            },
+                            "uuid": "bc86a269-b88a-48e2-b276-09bb70355079"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                },
+                {
+                    "description": "Symbol pin or wire end off connection grid",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0128 Pin 1 [GND, Power input, Line]",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.2381
+                            },
+                            "uuid": "df80f8b2-d64b-4699-a0f9-abf1a73a7bd8"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "endpoint_off_grid"
+                },
+                {
+                    "description": "The current configuration does not include the symbol library 'usb_msx'",
+                    "items": [
+                        {
+                            "description": "Symbol #GND0128 [GND]",
+                            "pos": {
+                                "x": 2.85,
+                                "y": 1.2381
+                            },
+                            "uuid": "aa561b10-dcfd-47fa-b2c4-6091241cb148"
+                        }
+                    ],
+                    "severity": "warning",
+                    "type": "lib_symbol_issues"
+                }
+            ]
+        }
+    ],
+    "source": "usb-to-msx-mouse.kicad_sch"
+}
